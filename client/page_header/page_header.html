@@ -1,0 +1,58 @@
+
+<template name= "page_header">
+	<div id="pageHeader">
+	  <div class="page_wrapper">  
+
+	<div class="page_content" style="padding:0px;">
+	<!-- Header -->	
+		
+			<img id="pageLogo" src='/images/hbok.jpg' onclick="app.navigate('/', {trigger: true});">
+			</img>
+			<div id="page_banner">
+				<nav id="nav-wrap">
+					{{> standardLinks}}
+					{{> mobileLinks}}
+				</nav>
+			</div>
+
+
+</div>
+</div>
+</div>
+</template>
+
+<template name="mobileLinks">
+	<div id ="navlinks_mobile">
+					<div id="menu-icon" > 
+						<img id="menu-icon-img" src="/images/menu-icon.png"/> 
+						MENY 
+					</div>
+ 					<div id="nav">
+						{{> navlinks}}
+						{{loginButtons}}
+					</div>
+				
+			</div>
+</template>
+ 
+<template name="standardLinks">
+	<div id="navlinksStandard">
+		{{> navlinks}}
+ 		<div style ='float:right'>
+			{{#if canSeeAdminPage}}
+			<div class="navBtn" onclick="app.navigate('admin', {trigger: true});"> 
+				Admin
+			</div>
+			{{/if}}
+			{{loginButtons}}
+
+		</div>
+	</div>
+
+</template>
+
+<template name ="navlinks">
+	<div class="navBtn" onclick="app.navigate('nyheter', {trigger: true});"> 
+		Nyheter
+	</div>
+</template>

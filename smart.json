@@ -1,0 +1,12 @@
+{
+  "packages": {
+    "collectionFS": {},
+    "canvas-image-manipulation": {},
+    "meteor-SCEditor": {
+      "git": "https://github.com/LearningWellWest/meteor-SCEditor-pkg.git"
+    },
+    "roles": {},
+    "jquery-ui": {},
+    "toastjs": {}
+  }
+}

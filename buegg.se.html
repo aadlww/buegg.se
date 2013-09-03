@@ -1,14 +1,41 @@
 <head>
-  <title>Hammarö Bygg och Kakel</title>
+	<link rel="icon" type="image/ico" href="favicon.ico"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Hammarö Bygg & Kakel</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
-	{{loginButtons}}
-  {{> hello}}
+	{{> googleAnalytics}}
+	{{> alert}}
+	{{> spinner}}
+	{{> standardPage}}
 </body>
 
-<template name="hello">
-  <h1>Hello World!</h1>
-  {{greeting}}
-  <input type="button" value="Click" />
+<template name ="standardPage">
+	{{> alert}}
+	{{> page_header}}
+	{{> page_footer}}
 </template>
+
+<!-- <template name='user_loginButtons'>
+			{{#if currentUser}}
+				{{> user_loggedIn}}
+			{{else}}
+				{{> user_not_loggedIn}}
+			{{/if}}
+</template>
+
+<template name = 'user_loggedIn'>
+	<div id="navBtnLogout" class="navBtn" onclick="Meteor.logout(); app.navigate('', {trigger: true})">
+		Logga ut {{currentUser.profile.name}}
+	</div>
+</template>
+
+<template name = 'user_not_loggedIn'>
+
+	<div id="navBtnLogin" class="navBtn" onClick="app.navigate('login', {trigger: true})">
+		Logga in
+	</div>
+
+</template> -->

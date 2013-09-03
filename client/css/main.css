@@ -1,0 +1,448 @@
+/* General
+----------------------------------------------------------------------------------------------------*/
+html {
+    overflow-y: scroll;
+}
+
+body {
+
+    /*font-family: arial, helvetica, freesans, sans-serif;*/
+/*    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; */
+   
+    font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+    font-weight: 300;
+    color: #333;
+    background-image: url('/images/tile4.jpg');
+    background-color: #eee;
+    margin:0;
+
+}
+
+
+a {
+  text-decoration: none;
+  color:#15c;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+.centrify{
+    max-width: 900px;
+    min-height: 50px;
+    margin: 0 auto;
+}
+
+/* General : page_content
+----------------------------------------------------*/
+
+.page_content{
+    padding: 20px;
+    overflow:hidden;
+
+}
+#right-col{
+    float: left;
+}
+
+/* Alert 
+----------------------------------------------------*/
+.alertDiv{
+    width: 100%;
+    min-height: 30px;
+    line-height: 30px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display:none;
+    z-index: 1;
+
+}
+
+/* Spinner
+----------------------------------------------------*/
+#spinner{
+    position:fixed;
+    z-index: 10;  
+    top:50%;  
+    left:50%;  
+    margin:-100px 0 0 -100px; 
+
+    width:200px;
+    height: 60px;
+    background-color:#fff;
+    border:2px solid #000;
+    padding-top:20px;
+}
+
+
+
+/* General : header
+----------------------------------------------------*/
+#pageHeader .page_wrapper{
+    margin-top:40px;
+    background-color:transparent;
+}
+#pageLogo{
+    cursor:pointer;
+    float:left;
+}
+
+#page_banner a{
+    color:#000;
+}
+
+#nav-wrap{
+    width:100%;
+}
+
+#navlinks_default {
+    display:block;
+}
+#navlinks_mobile {
+    display:none;
+    z-index: 100;
+    font-size: 20px;
+    height:100%;
+}
+
+/* mobile menu nav */
+
+#nav {
+    clear: both;
+    position: absolute;
+    width: 100%;
+    z-index: 10000;
+    display: none; /* visibility will be toggled with jquery */
+    padding:10px;
+    
+}
+#nav .navBtn {
+    float: none;
+    padding-left:10px;
+}
+#nav .navBtn:hover {
+    cursor:pointer;
+}
+
+/* menu icon */
+#menu-icon {
+    height:50px;
+    line-height:50px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+#menu-icon:hover {
+    cursor:pointer;
+}
+
+.navBtn{
+    float:left;
+    padding-left:5px;
+    padding-right:5px;
+    
+}
+
+.navBtn:hover{
+    text-decoration: underline;
+    cursor:pointer;
+}
+
+#navBtn_login{
+    float:right;
+}
+
+
+/* General : Annonsera new_ad
+----------------------------------------------------*/
+
+.newAdFormDiv{
+    margin:0 auto;
+    max-width:600px;
+}
+
+.new_ad textarea {
+
+    resize: vertical;
+
+}
+
+.new_ad #validationErrors{
+    color:red;
+}
+.error{
+    /*border:1px solid red;*/
+    background-color: #FFCCCC;
+}
+
+.new_ad .fileTable{
+
+    float:left;
+    width:100%;
+
+}
+
+.new_ad .progressbar {
+    text-align: center;
+    background-color: #E0E0E0;
+    height:20px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width:200px;
+}
+
+.new_ad .progressbar div {
+    margin-top: 0;
+   background-color: #BEDA38;
+   height: 20px;
+   float:left;
+}
+
+.new_ad .imgCont{
+    margin: 5px;
+    height:150px;
+    width:200px;
+    float:left;
+    position:relative;
+    background-color:#F0F0F0;
+    border: 1px solid #E0E0E0;
+
+}
+
+.imgCont button{
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    font-family:arial;
+    font-size:15px;
+    font-weight:bold;
+    padding:6px 14px;
+    text-decoration:none;
+}
+
+.imgCont img {
+
+    max-width: 200px;
+    max-height: 130px;
+}
+
+
+/* General : Annonser
+----------------------------------------------------*/
+.ads_list #ads_content{
+    display:none;
+}
+
+#ads_table tr:hover{
+    background:#F8F8F8;
+    cursor:pointer;
+}
+
+#ads_table{
+    margin-top:30px;
+    table-layout: fixed;
+    width: 100%; 
+    border:0px;
+    border-spacing: 0px;
+}
+
+#ads_table tr{
+    height:100px;
+}
+
+#ads_table .ad_info_first{
+    width: 150px;
+    text-align: center;
+    background-color: #F8F8F8;
+    border:1px solid #E8E8E8;
+}
+
+#ads_table .ad_info_second{
+    padding-left:30px;
+    word-wrap: break-word;
+    width:100%;
+}
+#ads_table .ad_info_date{
+    word-wrap: break-word;
+    width:50px;
+}
+
+.ad_info_thumbimg{
+    max-height: 100px;
+    max-width: 150px;
+}
+#ads_table .ad_info_name{
+    font-size: 20px;
+    font-family: helvetica;
+    font-weight: bold;
+
+}
+
+/* General : Min sida
+----------------------------------------------------*/
+#my_page_form{
+    width:600px;
+    margin:0 auto;
+}
+
+
+
+
+/* General : Annons
+----------------------------------------------------*/
+
+#ad #ad_description
+{
+    width:100%;
+    overflow:auto;
+    word-wrap:break-word;
+}
+
+#left-col{
+    float: left;
+    padding-right: 10px;
+}
+
+#article_img{
+    max-width:500px;
+    max-height:400px;
+}
+#image_list{
+    max-width: 500px;
+}
+
+/* General : admin
+----------------------------------------------------*/
+  #page_admin table{
+    border-spacing: 0px;
+    width: 100%;
+  }
+  #page_admin table th{
+    border-right: solid 1px white;
+    border-left: solid 1px white;
+    background-color: #BEDA38;
+    border-bottom: 10px;
+  }
+  #page_admin table td{
+    padding: 10px;
+  }
+    #page_admin table tr{
+    border: 10px;
+  }
+    #page_admin table tr:hover{
+    background:#F8F8F8;;
+  }
+
+/* General : footer
+----------------------------------------------------*/
+.footer-col{
+    width:295px;
+    height:100%;
+    float:left;
+    background-color:white;
+    margin-right:5px;
+    margin-bottom:5px;
+}
+.padder{
+    margin:10px;
+}
+#page_footer{
+    height:150px;
+
+}
+
+
+/*mobile page*/
+
+@media only screen and (max-width: 500px) {
+
+    body{
+        padding-right:0px;
+        padding-left:0px;
+    }
+
+    #pageHeader .page_wrapper {
+        margin-top:0px;
+    }
+
+    #nav .navBtn {
+    }
+    #page_banner {
+        line-height: 50px !important;
+        height: 50px !important;
+        margin-top:10px !important;
+    }
+
+
+    /*Annonser - mobile*/
+
+    #ads_table .ad_info_second{
+        padding-left: 5px;
+        width:auto;
+    }
+    #ads_table .ad_info_first{
+        height: 100px;
+        width: 100px;
+    }
+
+    #ads_table .ad_info_date{
+        display:none;
+    }
+
+    #ads_table .descriptionText {
+        visibility:hidden;
+    }
+    #ads_table tr{
+    height:100px;
+    }
+    .ad_info_thumbimg{
+    max-height: 100px;
+    max-width: 100px;
+}
+    #page_banner{
+        /*height:50px;
+        line-height:50px;*/
+    }
+    #page_content{
+        padding: 0px;
+    }
+
+    fieldset{
+        border: 0;
+        padding:0px;
+    }
+
+    #navlinksStandard {
+        display:none;
+    }
+    #navlinks_mobile {
+        display:inline;
+    }
+
+    form input,
+    form select,
+    form textarea,
+    form fieldset{
+        width: 100%;
+    } 
+
+    #article_img{
+    width:100%;
+    max-height:300px;
+    }
+    #image_list{
+    width: 100%;
+    }
+
+    #radiosCondition{
+        margin-left:0px;
+    }
+    .innerFieldset{
+        width:100%;
+        padding-left:0px;
+    }
+
+}

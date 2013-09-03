@@ -1,0 +1,52 @@
+{
+  "meteor": {
+    "git": "https://github.com/meteor/meteor.git",
+    "branch": "master",
+    "commit": "bb6c88ca9e3409ce4d50b796123c62cfb8fc71fd"
+  },
+  "dependencies": {
+    "basePackages": {
+      "collectionFS": {},
+      "canvas-image-manipulation": {},
+      "meteor-SCEditor": {
+        "git": "https://github.com/LearningWellWest/meteor-SCEditor-pkg.git",
+        "branch": "master"
+      },
+      "roles": {},
+      "jquery-ui": {},
+      "toastjs": {}
+    },
+    "packages": {
+      "collectionFS": {
+        "git": "https://github.com/raix/Meteor-CollectionFS.git",
+        "tag": "v0.2.3",
+        "commit": "4a1b9298a7ce64269fd14be29d9c4797b9253103"
+      },
+      "canvas-image-manipulation": {
+        "git": "https://github.com/jackp/canvas-image-manipulation.git",
+        "tag": "v0.1.0",
+        "commit": "bd29971e84b1f37168bca4548f621df26845c978"
+      },
+      "meteor-SCEditor": {
+        "git": "https://github.com/LearningWellWest/meteor-SCEditor-pkg.git",
+        "branch": "master",
+        "commit": "d198de460a330484ba4fde4f0769a004820eada0"
+      },
+      "roles": {
+        "git": "https://github.com/alanning/meteor-roles.git",
+        "tag": "v1.0.6",
+        "commit": "f81cbf7c765a4ed7e16a580c288db6f10a90856b"
+      },
+      "jquery-ui": {
+        "git": "https://github.com/TimHeckel/meteor-jquery-ui.git",
+        "tag": "v1.9.2",
+        "commit": "c437d45edcf1367df8d5ffa8bad2867758030bd2"
+      },
+      "toastjs": {
+        "git": "https://github.com/srackham/toast.js.git",
+        "tag": "v2.0.5",
+        "commit": "55f5af84be856ab819bdda4135f4203c499cf2d6"
+      }
+    }
+  }
+}
