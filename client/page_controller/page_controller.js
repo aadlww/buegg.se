@@ -1,3 +1,3 @@
-// Template.page_controller.display_page = function (){
-//      return Template[Session.get('currentPage')]();
-// };
+Template.page_controller.display_page = function (){
+      return Template[Session.get('currentPage')]();
+};

@@ -1,41 +1,43 @@
 <head>
-	<link rel="icon" type="image/ico" href="favicon.ico"/>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>Hammarö Bygg & Kakel</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/ico" href="favicon.ico"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Hammarö Bygg & Kakel</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
-	{{> googleAnalytics}}
-	{{> alert}}
-	{{> spinner}}
-	{{> standardPage}}
+{{> googleAnalytics}}
+{{> alert}}
+{{> spinner}}
+{{> standardPage}}
 </body>
 
 <template name ="standardPage">
-	{{> alert}}
-	{{> page_header}}
-	{{> page_footer}}
+{{> alert}}
+{{loginButtons align="left"}}
+{{> page_header}}
+{{> page_controller}}
+{{> page_footer}}
 </template>
 
 <!-- <template name='user_loginButtons'>
-			{{#if currentUser}}
-				{{> user_loggedIn}}
-			{{else}}
-				{{> user_not_loggedIn}}
-			{{/if}}
+{{#if currentUser}}
+{{> user_loggedIn}}
+{{else}}
+{{> user_not_loggedIn}}
+{{/if}}
 </template>
 
 <template name = 'user_loggedIn'>
-	<div id="navBtnLogout" class="navBtn" onclick="Meteor.logout(); app.navigate('', {trigger: true})">
-		Logga ut {{currentUser.profile.name}}
-	</div>
+<div id="navBtnLogout" class="navBtn" onclick="Meteor.logout(); app.navigate('', {trigger: true})">
+Logga ut {{currentUser.profile.name}}
+</div>
 </template>
 
 <template name = 'user_not_loggedIn'>
 
-	<div id="navBtnLogin" class="navBtn" onClick="app.navigate('login', {trigger: true})">
-		Logga in
-	</div>
+<div id="navBtnLogin" class="navBtn" onClick="app.navigate('login', {trigger: true})">
+Logga in
+</div>
 
 </template> -->

@@ -1,6 +1,6 @@
 Meteor.methods({
-	'postToFacebok':function(text) {
-		var graph = Npm.require('fbgraph');
+	//'postToFacebok':function(text) {
+	//	var graph = Npm.require('fbgraph');
 	// 	if(Meteor.user().services.facebook.accessToken) {
 	// 		graph.setAccessToken(Meteor.user().services.facebook.accessToken);
 	// 		var future = new Future();
@@ -15,5 +15,5 @@ Meteor.methods({
 	// 	{
 	// 		return false;
 	// 	}
-	}
+	//}
 });

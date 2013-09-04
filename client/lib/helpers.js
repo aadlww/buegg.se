@@ -3,21 +3,21 @@
 
 if (Meteor.isClient) {
 
-//Returns which template to load. Used in router
-Handlebars.registerHelper('currentPage',function(input){
-  return Session.get("currentPage");
-});
+  //Returns which template to load. Used in router
+  Handlebars.registerHelper('currentPage',function(input){
+    return Session.get("currentPage");
+  });
 
-// Uses same syntax as #if helper but initially returns false for falsey or empty string values.
+  // Uses same syntax as #if helper but initially returns false for falsey or empty string values.
 // Used when filling the category-dropdown
 
-Handlebars.registerHelper('unless_blank', function(item, block) {
-  return (item && item.replace(/\s/g,"").length) ? block.fn(this) : block.inverse(this);
-});
+  Handlebars.registerHelper('unless_blank', function(item, block) {
+    return (item && item.replace(/\s/g,"").length) ? block.fn(this) : block.inverse(this);
+  });
 
-Handlebars.registerHelper('tasksLoaded',function(input){
-  return Session.get('tasksLoaded');
-});
+  Handlebars.registerHelper('tasksLoaded',function(input){
+    return Session.get('tasksLoaded');
+  });
 
 }// if isClient
 
@@ -31,17 +31,17 @@ Handlebars.registerHelper('ifOr', function(v1, v2, options) {
 
 
 Handlebars.registerHelper('arrayify',function(obj){
-    result = [];
-    for (var key in obj){ 
-      if(key!='_id')
-        result.push({name:key,value:obj[key]});
+  result = [];
+  for (var key in obj){
+    if(key!='_id')
+      result.push({name:key,value:obj[key]});
     }
     return result;
-});
+  });
 
-Handlebars.registerHelper('canSeeAdminPage',function(obj){
+  Handlebars.registerHelper('isUserAdmin',function(obj){
     //if (Roles.userIsInRole(Meteor.user(), ['admin','moderator'])) {
-     //   return true;
-      //}
-      //return false;
-});
+      //   return true;
+    //}
+    return true;
+  });
