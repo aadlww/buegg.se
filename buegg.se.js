@@ -2,7 +2,6 @@
 
 if (Meteor.isClient) {
 
-
   //which template to load. Used in router
   Session.setDefault('currentPage','page_home');
 
@@ -12,10 +11,14 @@ if (Meteor.isClient) {
   //Subscribe to database pages
   Meteor.subscribe('pages');
 
+  // //Subscribe to facebook photos
+  Meteor.subscribe('fbphotos');
+
   //Session variable for the spinner
   Session.setDefault('loading',false);
   //var theme = getUserTheme(Meteor.user());
   //adjustTheme(theme);
+  Session.setDefault('timelinePhotos', {});
 
 
   Meteor.autorun(function () {
@@ -45,4 +48,3 @@ if (Meteor.isClient) {
 
 }//if isClient
 
- 

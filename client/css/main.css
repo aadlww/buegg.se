@@ -12,7 +12,7 @@ body {
     font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
     font-weight: 300;
     color: #333;
-    background-image: url('/images/tile4.jpg');
+    background-image: url('/images/cardboard.jpg');
     background-color: #eee;
     margin:0;
 
@@ -64,17 +64,17 @@ a:hover{
 /* Spinner
 ----------------------------------------------------*/
 #spinner{
-    position:fixed;
+    /*position:fixed;
     z-index: 10;  
-    top:50%;  
+    top:54%;  
     left:50%;  
     margin:-100px 0 0 -100px; 
 
     width:200px;
-    height: 60px;
-    background-color:#fff;
-    border:2px solid #000;
-    padding-top:20px;
+    height: 30px;
+    background-color:#fff;*/
+    /*border:2px solid #000;*/
+    /*padding-top:20px;*/
 }
 
 
@@ -345,6 +345,7 @@ a:hover{
     background-color:white;
     margin-right:5px;
     margin-bottom:5px;
+    -webkit-border-radius: 5px;
 }
 .padder{
     margin:10px;
@@ -446,3 +447,56 @@ a:hover{
     }
 
 }
+
+.metrobox{
+    float:left;
+    height:120px;
+    width:300px;
+    background-color: #fff;
+    position: relative;
+    margin-right: 9px;
+    margin-bottom: 9px;
+    cursor: pointer;
+
+}
+.front{
+    color:#fff;
+    font-size: 20px;
+    left:0;
+    right:0;
+    bottom:0;
+    top:0;
+    position: absolute;
+    margin-top: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    background-repeat:no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    padding:5px;
+
+}
+
+
+.metrobox:hover{
+    /*background-color:#E8E8E8;*/
+}
+
+
+/*.a{
+    position:absolute;
+    height:100px;
+    width:100%;
+
+}
+.b{
+    display:none;
+    padding: 5px;
+    height: 90px;
+}
+
+.a:hover + .b { display:block; }*/

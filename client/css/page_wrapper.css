@@ -9,7 +9,7 @@
     margin-bottom: 30px;
     min-height:50px;
     overflow:hidden;
-
+    -webkit-border-radius: 5px;
 
 	background-color: #fff;
 /*	-webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);

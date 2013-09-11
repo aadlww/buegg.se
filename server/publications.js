@@ -4,3 +4,8 @@ Meteor.publish("pages", function(){
 });
 
 
+Meteor.publish("fbphotos", function(){
+	
+	return FBPhotos.find();
+	
+});

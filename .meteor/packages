@@ -10,3 +10,5 @@ accounts-password
 accounts-ui
 accounts-facebook
 backbone
+fbgraph
+meteor-SCEditor

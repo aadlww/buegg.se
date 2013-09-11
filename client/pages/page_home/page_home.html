@@ -1,10 +1,42 @@
 <template name = "page_home">
 <div class="page_wrapper">
 	<div class="page_content">
-		<div id="home_content">
-			{{{homeContent.content}}}
-			Lite bilder snyggt från facebook här....
-		</div>
+		{{#each photos}}	
+			{{> metrobox}}
+		{{else}}
+			{{> photo_spinner}}
+		{{/each}}
+
 	</div>
 </div>
+</template>
+
+<template name= "photo">
+	<tr>
+		<td class="ad_info_first" >
+			<img class="ad_info_thumbimg" src='{{images.0.source}}' alt ="thumb"></img>
+		</td>
+	</tr>
+</template>
+
+<template name = "photo_spinner">
+	<div id="spinner">
+			<center>
+				<img src="/images/loader2.gif" /><br>
+			</center>
+	</div>
+</template>
+
+<template name="metrobox">
+	<div class="metrobox" id="metrobox_{{id}}" style="display:none;">
+		{{#if images.0.source}}
+			<div class="front" 
+			style="background-image:url({{images.0.source}});">
+			</div>
+		{{else}}
+			<div class="front" style="background-color:{{randomColor}}" >
+				<p>{{name}}</p>
+			</div>
+		{{/if}}
+	</div>
 </template>
