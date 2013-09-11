@@ -1,0 +1,31 @@
+#page_banner {
+/*	border-bottom: 1px solid #DDD;
+	border-top: 4px solid #000;*/
+	color: #000;
+	background-color:#4fbe37;
+	/*background-color:#C3DA28;*/
+    width:100%;
+    margin-top:0px;
+    /*padding-left:10px;*/
+    /*padding-right:10px;*/
+    font-size: 18px;
+    padding: 10px;
+    max-width:730px; 
+    float:right; 
+    height:47px; 
+    line-height:47px;
+    -webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	
+}
+#nav{
+	background-color: #4fbe37;
+}
+
+#page_banner a{
+    color:#000;
+}
+.selected{
+	text-decoration: underline;
+}
