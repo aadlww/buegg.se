@@ -26,9 +26,15 @@ Template.page_home.photos = function (){
 					FBPhotos.insert(photo);
 				});
 			}
+			if (album.name == "Mobile Uploads"){
+				album.photos.data.forEach(function(photo){
+					console.log(photo)
+					FBPhotos.insert(photo);
+				});
+			}
 		});
 	});
-	return FBPhotos.find();
+	return FBPhotos.find({},{sort: {created_time: -1}});
 };
 
 Meteor.startup(function() {
@@ -75,15 +81,24 @@ Meteor.startup(function() {
 		var thisBox = $(this.firstNode);
 
 		//1 if doublebox
-		var doublebox= Math.floor((Math.random()*2)+1);
-		if(doublebox==1){
-			thisBox.width("248");
+		//var doublebox= Math.floor((Math.random()*2)+1);
+		var box = Math.floor(Math.random() * 1000) % 3;
+		console.log(box);
+		if(box==2){
+			thisBox.width("420");
+		}
+		else if(box==1){
+			thisBox.width("276");
 		}
 		else{
-			thisBox.width("120");
+			thisBox.width("134");
 		}
 
 	//thisBox.slideToggle();
 	thisBox.fadeIn('slow');
 }
 });
+
+function mod(n, m) {
+        return ((m % n) + n) % n;
+}
