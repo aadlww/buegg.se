@@ -16,9 +16,16 @@ if (Meteor.isClient) {
 
   //Session variable for the spinner
   Session.setDefault('loading',false);
-  //var theme = getUserTheme(Meteor.user());
-  //adjustTheme(theme);
-  Session.setDefault('timelinePhotos', {});
+
+  //Sessions for homepage
+  Session.setDefault('logo', '/images/loader2.gif');
+  Session.setDefault('about', 'Laddar...');
+  Session.setDefault('name', 'Laddar...');
+  Session.setDefault('posts', 'Laddar...');
+ 
+  //Sessiosn for owner
+  Session.setDefault('owner_name', 'Laddar...');
+  Session.setDefault('owner_pic', '/images/loader2.gif');
 
 
   Meteor.autorun(function () {

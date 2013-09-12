@@ -9,25 +9,28 @@ $(document).mouseup(function (e)
       $("#nav").slideUp();
       // $(this).toggleClass("active");
     }
-  });
+});
 
-  Template.page_header.events ={
-    'click #menu-icon': function () {
-      $("#nav").slideToggle();
-      $(this).toggleClass("active");
-    },
-    'click .navBtn': function (e) {
-      if($(e.currentTarget).attr('id')){}
-        $("#nav").slideUp();
-        $('.selected').removeClass('selected');
-        $(e.currentTarget).addClass('selected');
-      }
+Template.page_header.events ={
+  'click #menu-icon': function () {
+    $("#nav").slideToggle();
+    $(this).toggleClass("active");
+  },
+  'click .navBtn': function (e) {
+    if($(e.currentTarget).attr('id')){}
+    $("#nav").slideUp();
+    $('.selected').removeClass('selected');
+    $(e.currentTarget).addClass('selected');
+  } 
+};
 
-    };
 
+Template.navlinks.helpers({
+  listPages: function(){
+    return Pages.find();
+  },
+});
 
-    Template.navlinks.helpers({
-      listPages: function(){
-        return Pages.find();
-      },
-    });
+Template.page_header.logo = function(){
+  return Session.get('logo');
+};

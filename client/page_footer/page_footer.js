@@ -12,3 +12,23 @@ Template.contactBox.rendered = function(){
 }(document, 'script', 'facebook-jssdk'));
 
 }
+
+Template.page_footer.about = function(){
+	return Session.get('about');
+};
+
+Template.page_footer.fbname = function(){
+	return Session.get('name');
+};
+
+Template.page_footer.posts = function(){
+	return Session.get('posts');
+};
+
+Template.page_footer.owner_name = function(){
+	return Session.get('owner_name');
+};
+
+Template.page_footer.owner_pic = function(){
+	return Session.get('owner_pic');
+};
