@@ -7,9 +7,17 @@ Template.page_admin.displayPage = function (){
 
   Template.page_admin.helpers({
     isUserAdmin: function() {
-      // if (Roles.userIsInRole(Meteor.user(), ['admin'])) {
-      //   return true;
-      // }
-      return true;
+      if(Meteor.user()){
+        if (Meteor.user().profile.name == 'Anders Åslund') {
+           return true;
+        }
+        if (Meteor.user().profile.name == 'Patric Sundell') {
+           return true;
+        }
+        if (Meteor.user().profile.name == 'Torbjörn Andersson') {
+           return true;
+        }
+      }
+      return false;
     },
     });

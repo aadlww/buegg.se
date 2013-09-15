@@ -11,7 +11,7 @@ if (Meteor.isClient) {
   //Subscribe to database pages
   Meteor.subscribe('pages');
 
-  // //Subscribe to facebook photos
+  // Subscribe to facebook photos
   Meteor.subscribe('fbphotos');
 
   //Session variable for the spinner
@@ -21,6 +21,7 @@ if (Meteor.isClient) {
   Session.setDefault('logo', '/images/loader2.gif');
   Session.setDefault('about', 'Laddar...');
   Session.setDefault('name', 'Laddar...');
+  Session.setDefault('phone', 'Laddar...');
   Session.setDefault('posts', 'Laddar...');
  
   //Sessiosn for owner

@@ -1,17 +1,4 @@
 
-// Template.page_home.latestAds = function() {
-
-	// 	Template.page_home.helpers({
-		// 		homeContent: function(){
-			// 			var homeContent = Pages.findOne({name:'Startsida'});
-			// 			if(homeContent){
-				// 				return homeContent
-			// 			}
-
-		// 		}
-	// 	});
-
-// }
 Template.page_home.rendered = function ( ) {
 	//console.log('ad_list rendered');
 	$('#home_content').fadeIn();
@@ -54,6 +41,9 @@ Meteor.startup(function() {
 		}
 		if (result.name) {
 			Session.set('name', result.name);
+		}
+		if (result.phone) {
+			Session.set('phone', result.phone);
 		}
 	});
 

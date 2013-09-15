@@ -21,6 +21,10 @@ Template.page_footer.fbname = function(){
 	return Session.get('name');
 };
 
+Template.contactBox.phone = function(){
+	return Session.get('phone');
+};
+
 Template.page_footer.posts = function(){
 	return Session.get('posts');
 };

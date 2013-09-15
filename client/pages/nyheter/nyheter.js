@@ -1,14 +1,10 @@
 
-// Template.page_home.latestAds = function() {
+Template.nyheter.rendered = function ( ) {
+	//console.log('ad_list rendered');
+	$('#ads_content').fadeIn();
+}
 
-// 	Template.page_home.helpers({
-// 		homeContent: function(){
-// 			var homeContent = Pages.findOne({name:'Startsida'});
-// 			if(homeContent){
-// 				return homeContent
-// 			}
+Template.nyheter.posts = function (){
+	return FBPhotos.find({},{sort: {created_time: -1}});
+};
 
-// 		}
-// 	});
-
-// }

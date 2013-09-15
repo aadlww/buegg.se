@@ -1,9 +1,34 @@
-<template name = "nyheter">
-<div class="page_wrapper">
-	<div class="page_content">
-		<div id="home_content">
-			Lite bilder snyggt formerat, hämtat från facebook, här....
+
+<template name="nyheter">
+	<div class="page_wrapper">	
+		<div class="page_content">
+			<div class ="ads_list">
+				<div id="ads_content">
+			      	<table id="ads_table">
+						{{#each posts}}	
+							{{> ad_info}}
+						{{else}}
+					  		{{> photo_spinner}}
+						{{/each}}
+					</table>
+				</div>
+			</div>
 		</div>
 	</div>
-</div>
+</template>
+
+<template name= "ad_info">
+	<tr>
+			<td class="ad_info_first" >
+				<img class="ad_info_thumbimg" src='{{images.0.source}}' alt ="thumb"></img>
+			</td>
+			<td class="ad_info_second">
+				<span class="ad_info_date">{{created_time}}</span></br>
+				<span class="ad_info_name">{{name}}</span></br>
+				<span class="descriptionText">{{description}}</span>
+			</td>
+
+			
+			
+	</tr>
 </template>

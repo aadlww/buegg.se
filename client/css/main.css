@@ -254,16 +254,17 @@ a:hover{
 }
 
 #ads_table .ad_info_first{
-    width: 150px;
-    text-align: center;
-    background-color: #F8F8F8;
-    border:1px solid #E8E8E8;
+    width: 284px;
+ /*   text-align: center;*/
+ /*   background-color: #F8F8F8;*/
+ /*   border:1px solid #E8E8E8;*/
 }
 
 #ads_table .ad_info_second{
     padding-left:30px;
     word-wrap: break-word;
-    width:100%;
+    width: 100%;
+    vertical-align:text-top;
 }
 #ads_table .ad_info_date{
     word-wrap: break-word;
@@ -271,11 +272,11 @@ a:hover{
 }
 
 .ad_info_thumbimg{
-    max-height: 100px;
-    max-width: 150px;
+   /* max-height: 100px;*/
+    max-width: 300px;
 }
 #ads_table .ad_info_name{
-    font-size: 20px;
+    font-size: 18px;
     font-family: helvetica;
     font-weight: bold;
 

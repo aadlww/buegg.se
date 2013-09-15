@@ -30,8 +30,7 @@
 <template name="metrobox">
 	<div class="metrobox" id="metrobox_{{id}}" style="display:none;">
 		{{#if images.0.source}}
-			<div class="front" 
-			style="background-image:url({{images.0.source}});">
+			<div class="front" style="background-image:url({{images.0.source}});"  onclick="window.location='{{link}}';">
 			</div>
 		{{else}}
 			<div class="front" style="background-color:{{randomColor}}" >

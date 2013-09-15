@@ -40,8 +40,16 @@ Handlebars.registerHelper('arrayify',function(obj){
   });
 
   Handlebars.registerHelper('isUserAdmin',function(obj){
-    //if (Roles.userIsInRole(Meteor.user(), ['admin','moderator'])) {
-      //   return true;
-    //}
-    return true;
+    if(Meteor.user()){
+      if (Meteor.user().profile.name == 'Anders Åslund') {
+         return true;
+      }
+      if (Meteor.user().profile.name == 'Patric Sundell') {
+         return true;
+      }
+      if (Meteor.user().profile.name == 'Torbjörn Andersson') {
+         return true;
+      }
+    }
+    return false;
   });

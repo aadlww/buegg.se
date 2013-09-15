@@ -4,4 +4,3 @@ FBPhotos = new Meteor.Collection("fbphotos");
 if (Meteor.isServer) {
   	fs = Npm.require('fs');
 }
-
