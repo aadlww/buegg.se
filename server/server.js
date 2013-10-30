@@ -1,6 +1,6 @@
 var facebookURL = "hammarobygg";
 var facebookURLOwner = "patric.sundell";
-var facebookPostsLimit = 40;
+var facebookPostsLimit = 15;
 
 Meteor.methods({
 	getPageFBLogo: function () {
