@@ -14,20 +14,11 @@ if (Meteor.isClient) {
   // Subscribe to facebook photos
   Meteor.subscribe('fbphotos');
 
+  // Subscribe to facebook site info
+  Meteor.subscribe('fbsiteinfo');
+
   //Session variable for the spinner
   Session.setDefault('loading',false);
-
-  //Sessions for homepage
-  Session.setDefault('logo', '/images/loader2.gif');
-  Session.setDefault('about', 'Laddar...');
-  Session.setDefault('name', 'Laddar...');
-  Session.setDefault('phone', 'Laddar...');
-  Session.setDefault('posts', 'Laddar...');
- 
-  //Sessiosn for owner
-  Session.setDefault('owner_name', 'Laddar...');
-  Session.setDefault('owner_pic', '/images/loader2.gif');
-
 
   Meteor.autorun(function () {
     // var theme = getUserTheme(Meteor.user());

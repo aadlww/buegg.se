@@ -11,28 +11,59 @@ Template.contactBox.rendered = function(){
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 
-}
+};
 
 Template.page_footer.about = function(){
-	return Session.get('about');
+	var site = FBSiteInfo.find({site: facebookURL}).fetch();
+	if (site.length > 0)
+	{
+		console.log(site[0].about);
+		return site[0].about;
+	}
 };
 
 Template.page_footer.fbname = function(){
-	return Session.get('name');
+	var site = FBSiteInfo.find({site: facebookURL}).fetch();
+	if (site.length > 0)
+	{
+		console.log(site[0].name);
+		return site[0].name;
+	}
 };
 
 Template.contactBox.phone = function(){
-	return Session.get('phone');
+	var site = FBSiteInfo.find({site: facebookURL}).fetch();
+	if (site.length > 0)
+	{
+		console.log(site[0].phone);
+		return site[0].phone;
+	}
 };
 
 Template.page_footer.posts = function(){
-	return Session.get('posts');
+	var site = FBSiteInfo.find({site: facebookURL}).fetch();
+	if (site.length > 0)
+	{
+		console.log(site[0].posts);
+		return site[0].posts;
+	}
 };
 
 Template.page_footer.owner_name = function(){
-	return Session.get('owner_name');
+	var site = FBSiteInfo.find({site: facebookURL}).fetch();
+	if (site.length > 0)
+	{
+		console.log(site[0].owner_name);
+		return site[0].owner_name;
+	}
 };
 
 Template.page_footer.owner_pic = function(){
-	return Session.get('owner_pic');
+	var site = FBSiteInfo.find({site: facebookURL}).fetch();
+	if (site.length > 0)
+	{
+		console.log(site[0].owner_pic);
+		return site[0].owner_pic;
+	}
+	return loadingIcon;
 };

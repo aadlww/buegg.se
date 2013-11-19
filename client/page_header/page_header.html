@@ -1,38 +1,32 @@
 
 <template name= "page_header">
 	<div id="pageHeader">
-	  
-	  <div class="page_wrapper">  
-
-	<div class="page_content" style="padding:0px;">
-	<!-- Header -->	
-			
-			<img id="pageLogo" src='{{logo}}' onclick="app.navigate('/', {trigger: true});">
-			</img>
-			<div id="page_banner">
-				<nav id="nav-wrap">
-					{{> standardLinks}}
-					{{> mobileLinks}}
-				</nav>
+	  	<div class="page_wrapper">  
+			<div class="page_content" style="padding:0px;">
+			<!-- Header -->	
+				<img id="pageLogo" src='{{logo}}' onclick="app.navigate('/', {trigger: true});">
+				</img>
+				<div id="page_banner">
+					<nav id="nav-wrap">
+						{{> standardLinks}}
+						{{> mobileLinks}}
+					</nav>
+				</div>
 			</div>
-
-
-</div>
-</div>
-</div>
+		</div>
+	</div>
 </template>
 
 <template name="mobileLinks">
 	<div id ="navlinks_mobile">
-					<div id="menu-icon" > 
-						<img id="menu-icon-img" src="/images/menu-icon.png"/> 
-						MENY 
-					</div>
- 					<div id="nav">
-						{{> navlinks}}
-					</div>
-				
-			</div>
+		<div id="menu-icon" > 
+			<img id="menu-icon-img" src="/images/menu-icon.png"/> 
+			MENY 
+		</div>
+			<div id="nav">
+			{{> navlinks}}
+		</div>
+	</div>
 </template>
  
 <template name="standardLinks">

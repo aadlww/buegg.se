@@ -1,9 +1,5 @@
 {
-  "meteor": {
-    "git": "https://github.com/meteor/meteor.git",
-    "branch": "master",
-    "commit": "bb6c88ca9e3409ce4d50b796123c62cfb8fc71fd"
-  },
+  "meteor": {},
   "dependencies": {
     "basePackages": {
       "collectionFS": {},
@@ -14,13 +10,14 @@
       },
       "roles": {},
       "jquery-ui": {},
-      "toastjs": {}
+      "toastjs": {},
+      "cron": {}
     },
     "packages": {
       "collectionFS": {
         "git": "https://github.com/raix/Meteor-CollectionFS.git",
-        "tag": "v0.2.3",
-        "commit": "4a1b9298a7ce64269fd14be29d9c4797b9253103"
+        "tag": "v0.3.6",
+        "commit": "e28922685d07fc2bd17e23571eeb050cd85176f7"
       },
       "canvas-image-manipulation": {
         "git": "https://github.com/jackp/canvas-image-manipulation.git",
@@ -46,6 +43,16 @@
         "git": "https://github.com/srackham/toast.js.git",
         "tag": "v2.0.6",
         "commit": "a81915d9df2f432486ac6ce8d6981419119e7007"
+      },
+      "cron": {
+        "git": "https://github.com/alexsuslov/Meteor.cron.git",
+        "tag": "v0.0.1",
+        "commit": "5216d14472fee7b692e8371aadc9f35f54ba9bb0"
+      },
+      "cfs-public-folder": {
+        "git": "https://github.com/nooitaf/meteor-cfs-public-folder.git",
+        "tag": "v0.0.3",
+        "commit": "581c716424b374efb6f611110002621f9cc9212b"
       }
     }
   }

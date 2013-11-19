@@ -1,42 +1,39 @@
     
 <template name = "page_footer">
-<div class="page_wrapper noshadow" style="background-color:transparent" >
+	<div class="page_wrapper noshadow" style="background-color:transparent" >
 	    <div id="page_footer">
 	    	<div class="footer-col" style="vertical-align:bottom;">
 	    		<div class="padder">
-	    		<font size="+2" color="#666666">Vad är {{fbname}}?</font>
-	    		<br>
-	    		{{about}}
+		    		<font size="+2" color="#666666">Vad är {{fbname}}?</font>
+		    		<br>
+		    		{{about}}
 	    		</div>
 	    	</div>
 	    	<div class="footer-col">
 	    		<div class="padder">
-	    		<img src={{owner_pic}} />
-	    		<div style="width:130px; float:right">
-	    			<font size="+1" color="#58AA38"><i>"{{posts}}"</i></font><br>
-	    			<br>
-		    		VD<br>
-		    		{{owner_name}}
-	    		</div>
+		    		<img src={{owner_pic}} />
+		    		<div style="width:130px; float:right">
+		    			<font size="+1" color="#58AA38"><i>"{{posts}}"</i></font><br>
+		    			<br>
+			    		VD<br>
+			    		{{owner_name}}
+		    		</div>
+		    	</div>
 	    	</div>
-	    	</div>
-	    	
-	    	{{>contactBox}}
-	    	
+	    	{{>contactBox}}	
     	</div>
-</div>
-
+	</div>
 </template>
 
 <template name="contactBox">
 	<div class="footer-col">
 	    <div class="padder">
-	    		Kontakt<br>
-	    		Tel: {{phone}}<br>
-				<!-- E-post: patric@bügg.se<br><br>
-				<a href="https://twitter.com/off2off" class="twitter-follow-button" data-show-count="false" data-lang="sv" data-dnt="true">Följ @off2off</a> -->
+    		Kontakt<br>
+    		Tel: {{phone}}<br>
+			<!-- E-post: patric@bügg.se<br><br>
+			<a href="https://twitter.com/off2off" class="twitter-follow-button" data-show-count="false" data-lang="sv" data-dnt="true">Följ @off2off</a> -->
 
-				<div class="fb-follow" data-href="https://www.facebook.com/hammarobygg" data-show-faces="true" data-font="arial" data-width="200"></div>
+			<div class="fb-follow" data-href="https://www.facebook.com/hammarobygg" data-show-faces="true" data-font="arial" data-width="200"></div>
 	    </div>
 	</div>
 </template>

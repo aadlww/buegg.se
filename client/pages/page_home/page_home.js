@@ -2,7 +2,7 @@
 Template.page_home.rendered = function ( ) {
 	//console.log('ad_list rendered');
 	$('#home_content').fadeIn();
-}
+};
 
 Template.page_home.photos = function (){
 	return FBPhotos.find({},{sort: {created_time: -1}});
@@ -10,59 +10,60 @@ Template.page_home.photos = function (){
 
 Meteor.startup(function() {
 
-	Meteor.call('getPageFBLogo', function(err,result){
-		//console.log(result);
-		if (result.picture) {
-			Session.set('logo', result.picture.data.url);
-		}
-	});
-
-	Meteor.call('getTimeLinePhotos', function(err,result){
-		result.forEach(function(album) {
-			if (album.name == "Timeline Photos"){
-				album.photos.data.forEach(function(photo){
-					//console.log(photo)
-					FBPhotos.insert(photo);
-				});
-			}
-			if (album.name == "Mobile Uploads"){
-				album.photos.data.forEach(function(photo){
-					//console.log(photo)
-					FBPhotos.insert(photo);
-				});
-			}
-		});
-	});
-
-	Meteor.call('getPageFBData', function(err,result){
-		//console.log(result);
-		if (result.about) {
-			Session.set('about', result.about);
-		}
-		if (result.name) {
-			Session.set('name', result.name);
-		}
-		if (result.phone) {
-			Session.set('phone', result.phone);
-		}
-	});
-
-	Meteor.call('getPageFBPosts', function(err,result){
-		//console.log(result);
-		if (result.posts) {
-			Session.set('posts', result.posts.data[0].message);
-		}
-	});
 	
-	Meteor.call('getOwnerFBMetadata', function(err,result){
-		//console.log(result);
-		if (result.name){
-			Session.set('owner_name', result.name);
-		}
-		if (result.picture) {
-			Session.set('owner_pic', result.picture.data.url);
-		}
-	});
+	// Meteor.call('getPageFBLogo', function(err,result){
+	// 	//console.log(result);
+	// 	if (result.picture) {
+	// 		Session.set('logo', result.picture.data.url);
+	// 	}
+	// });
+
+	// Meteor.call('getTimeLinePhotos', function(err,result){
+	// 	result.forEach(function(album) {
+	// 		if (album.name == "Timeline Photos"){
+	// 			album.photos.data.forEach(function(photo){
+	// 				//console.log(photo)
+	// 				FBPhotos.insert(photo);
+	// 			});
+	// 		}
+	// 		if (album.name == "Mobile Uploads"){
+	// 			album.photos.data.forEach(function(photo){
+	// 				//console.log(photo)
+	// 				FBPhotos.insert(photo);
+	// 			});
+	// 		}
+	// 	});
+	// });
+
+	// Meteor.call('getPageFBData', function(err,result){
+	// 	//console.log(result);
+	// 	if (result.about) {
+	// 		Session.set('about', result.about);
+	// 	}
+	// 	if (result.name) {
+	// 		Session.set('name', result.name);
+	// 	}
+	// 	if (result.phone) {
+	// 		Session.set('phone', result.phone);
+	// 	}
+	// });
+
+	// Meteor.call('getPageFBPosts', function(err,result){
+	// 	//console.log(result);
+	// 	if (result.posts) {
+	// 		Session.set('posts', result.posts.data[0].message);
+	// 	}
+	// });
+	
+	// Meteor.call('getOwnerFBMetadata', function(err,result){
+	// 	//console.log(result);
+	// 	if (result.name){
+	// 		Session.set('owner_name', result.name);
+	// 	}
+	// 	if (result.picture) {
+	// 		Session.set('owner_pic', result.picture.data.url);
+	// 	}
+	// });
 
 	Template.metrobox.helpers({
 
@@ -126,4 +127,4 @@ Meteor.startup(function() {
 
 function mod(n, m) {
         return ((m % n) + n) % n;
-}
+};
