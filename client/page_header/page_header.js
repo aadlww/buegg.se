@@ -32,5 +32,19 @@ Template.navlinks.helpers({
 });
 
 Template.page_header.logo = function(){
-  return Session.get('logo');
+  var site = FBSiteInfo.find({site: facebookURL}).fetch();
+  if (site.length > 0)
+  {
+    console.log(site[0].logo);
+    return site[0].logo;
+  }
+};
+
+Template.page_header.fbname = function(){
+  var site = FBSiteInfo.find({site: facebookURL}).fetch();
+  if (site.length > 0)
+  {
+    console.log(site[0].name);
+    return site[0].name;
+  }
 };

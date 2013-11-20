@@ -47,3 +47,11 @@ if (Meteor.isClient) {
 
 }//if isClient
 
+// Template.site.fbname = function(){
+//   var site = FBSiteInfo.find({site: facebookURL}).fetch();
+//   if (site.length > 0)
+//   {
+//     console.log(site[0].name);
+//     return site[0].name;
+//   }
+// };
