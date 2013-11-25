@@ -8,6 +8,9 @@
     "roles": {},
     "jquery-ui": {},
     "toastjs": {},
-    "cron": {}
+    "cron": {},
+    "accounts-ui-bootstrap-dropdown": {},
+    "bootstrap-3": {},
+    "jquery-ui-bootstrap": {}
   }
 }

@@ -1,22 +1,15 @@
 <template name = "page_home">
-<div class="page_wrapper">
-	<div class="page_content">
-		{{#each photos}}	
-			{{> metrobox}}
-		{{else}}
-			{{> photo_spinner}}
-		{{/each}}
-
-	</div>
-</div>
+	{{#each photos}}	
+		{{> metrobox}}
+	{{else}}
+		{{> photo_spinner}}
+	{{/each}}
 </template>
 
 <template name= "photo">
-	<tr>
-		<td class="ad_info_first" >
+		<div class="col-md-4" >
 			<img class="ad_info_thumbimg" src='{{images.0.source}}' alt ="thumb"></img>
-		</td>
-	</tr>
+		</div>
 </template>
 
 <template name = "photo_spinner">
@@ -30,11 +23,7 @@
 <template name="metrobox">
 	<div class="metrobox" id="metrobox_{{id}}" style="display:none;">
 		{{#if images.0.source}}
-			<div class="front" style="background-image:url({{images.0.source}});"  onclick="window.location='{{link}}';">
-			</div>
-		{{else}}
-			<div class="front" style="background-color:{{randomColor}}" >
-				<p>{{name}}</p>
+			<div class="front" style="background-image:url({{images.0.source}});" onclick="window.location='{{link}}';">
 			</div>
 		{{/if}}
 	</div>

@@ -4,7 +4,7 @@ FBSiteInfo = new Meteor.Collection("fbsiteinfo");
 
 facebookURL = "hammarobygg"; //TODO: check if in database and if so set it
 facebookURLOwner = "patric.sundell"; //TODO: check if in database and if so set it
-facebookPostsLimit = 15; //TODO: check if in database and if so set it
+facebookPostsLimit = 9; //TODO: check if in database and if so set it
 loadingMsg = 'Laddar...'; //TODO: check if in database and if so set it
 loadingIcon = '/images/loader2.gif'; //TODO: check if in database and if so set it
 

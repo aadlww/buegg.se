@@ -1,4 +1,4 @@
-Template.contactBox.rendered = function(){
+Template.page_footer.rendered = function(){
 //add twitter button
 !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
 
@@ -31,7 +31,7 @@ Template.page_footer.fbname = function(){
 	}
 };
 
-Template.contactBox.phone = function(){
+Template.page_footer.phone = function(){
 	var site = FBSiteInfo.find({site: facebookURL}).fetch();
 	if (site.length > 0)
 	{
@@ -66,4 +66,13 @@ Template.page_footer.owner_pic = function(){
 		return site[0].owner_pic;
 	}
 	return loadingIcon;
+};
+
+Template.page_footer.logo = function(){
+  var site = FBSiteInfo.find({site: facebookURL}).fetch();
+  if (site.length > 0)
+  {
+    console.log(site[0].logo);
+    return site[0].logo;
+  }
 };

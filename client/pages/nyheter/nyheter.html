@@ -1,5 +1,46 @@
-
 <template name="nyheter">
+	{{#each posts}}	
+		{{> post_left}}
+	{{else}}
+		{{> photo_spinner}}
+	{{/each}}
+</template>
+
+<!-- <template name="post_other">
+  {{#if isEven index}}
+    {{> post_right}}
+  {{else}}
+    {{> post_left}}
+  {{/if}}
+</template> -->
+
+<template name= "post_rigth">
+  <div class="row featurette">
+    <div class="col-md-7">
+      <h2 class="featurette-heading"><span class="text-muted">{{name}}</span></h2>
+      <p class="lead">{{created_time}}</p>
+    </div>
+    <div class="col-md-5">
+      <img class="featurette-image img-responsive" src='{{images.0.source}}' alt="Generic placeholder image">
+    </div>
+  </div>
+  <hr class="featurette-divider">
+</template>
+
+<template name= "post_left">
+  <div class="row featurette">
+    <div class="col-md-5">
+      <img class="featurette-image img-responsive" src='{{images.0.source}}' alt="Generic placeholder image">
+    </div>
+    <div class="col-md-7">
+      <h2 class="featurette-heading"><span class="text-muted">{{name}}</span></h2>
+      <p class="lead">{{created_time}}</p>
+    </div>
+  </div>
+  <hr class="featurette-divider">
+</template>
+
+<!-- <template name="nyheter">
 	<div class="page_wrapper">	
 		<div class="page_content">
 			<div class ="ads_list">
@@ -31,4 +72,4 @@
 			
 			
 	</tr>
-</template>
+</template> -->

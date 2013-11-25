@@ -1,39 +1,29 @@
     
 <template name = "page_footer">
-	<div class="page_wrapper noshadow" style="background-color:transparent" >
-	    <div id="page_footer">
-	    	<div class="footer-col" style="vertical-align:bottom;">
-	    		<div class="padder">
-		    		<font size="+2" color="#666666">Vad är {{fbname}}?</font>
-		    		<br>
-		    		{{about}}
-	    		</div>
+	<hr class="featurette-divider">
+	<div class="container marketing" >
+	    <div id="row">
+	    	<div class="col-lg-4">
+	    		<h2>Vad är {{fbname}}?</h2>
+	    		<p>{{about}}</p>
 	    	</div>
-	    	<div class="footer-col">
-	    		<div class="padder">
-		    		<img src={{owner_pic}} />
-		    		<div style="width:130px; float:right">
-		    			<font size="+1" color="#58AA38"><i>"{{posts}}"</i></font><br>
-		    			<br>
-			    		VD<br>
-			    		{{owner_name}}
-		    		</div>
-		    	</div>
+	    	<div class="col-lg-4">
+	    		<h2>{{posts}}</h2>
+		    	<p>VD {{owner_name}}</p>
+		    	<img src={{owner_pic}} />
 	    	</div>
-	    	{{>contactBox}}	
+	    	</div>
+		    <div class="col-lg-4">
+		    	<img src={{logo}} />
+	    		<h2>Kontakt</h2>
+	    		<p>Tel: {{phone}}</p>
+				<!-- E-post: patric@bügg.se<br><br>-->
+		    </div>
     	</div>
+    	<center>
+    	<!--<a href="https://twitter.com/off2off" class="twitter-follow-button" data-show-count="false" data-lang="sv" data-dnt="true">Följ @off2off</a> -->
+		<p class="fb-follow" data-href="https://www.facebook.com/hammarobygg" data-show-faces="false" data-font="arial" data-width="250"></p>
+		</center>
 	</div>
-</template>
-
-<template name="contactBox">
-	<div class="footer-col">
-	    <div class="padder">
-    		Kontakt<br>
-    		Tel: {{phone}}<br>
-			<!-- E-post: patric@bügg.se<br><br>
-			<a href="https://twitter.com/off2off" class="twitter-follow-button" data-show-count="false" data-lang="sv" data-dnt="true">Följ @off2off</a> -->
-
-			<div class="fb-follow" data-href="https://www.facebook.com/hammarobygg" data-show-faces="true" data-font="arial" data-width="200"></div>
-	    </div>
-	</div>
+		
 </template>

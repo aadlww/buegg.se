@@ -11,7 +11,10 @@
       "roles": {},
       "jquery-ui": {},
       "toastjs": {},
-      "cron": {}
+      "cron": {},
+      "accounts-ui-bootstrap-dropdown": {},
+      "bootstrap-3": {},
+      "jquery-ui-bootstrap": {}
     },
     "packages": {
       "collectionFS": {
@@ -48,6 +51,21 @@
         "git": "https://github.com/alexsuslov/Meteor.cron.git",
         "tag": "v0.0.1",
         "commit": "5216d14472fee7b692e8371aadc9f35f54ba9bb0"
+      },
+      "accounts-ui-bootstrap-dropdown": {
+        "git": "https://github.com/erobit/meteor-accounts-ui-bootstrap-dropdown.git",
+        "tag": "v0.6.5.1",
+        "commit": "c8b29d2e7f8611d6dec9d6d23c1c2b94e000b0fb"
+      },
+      "bootstrap-3": {
+        "git": "https://github.com/mangasocial/meteor-bootstrap-3.git",
+        "tag": "v0.3.6",
+        "commit": "711dbcabe333c8714298b2fd1de97fdcdae6efa7"
+      },
+      "jquery-ui-bootstrap": {
+        "git": "https://github.com/TimHeckel/meteor-jquery-ui-bootstrap.git",
+        "tag": "v0.1.2",
+        "commit": "fa742a85639307003e105898e15b631394b63509"
       },
       "cfs-public-folder": {
         "git": "https://github.com/nooitaf/meteor-cfs-public-folder.git",

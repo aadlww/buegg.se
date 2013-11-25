@@ -12,7 +12,7 @@ body {
     font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
     font-weight: 300;
     color: #333;
-    background-image: url('/images/cardboard.jpg');
+    /*background-image: url('/images/cardboard.jpg');*/
     background-color: #eee;
     margin:0;
 
@@ -452,10 +452,10 @@ a:hover{
 .metrobox{
     float:left;
     height:120px;
-    width:300px;
+    width:380px;
     background-color: #fff;
     position: relative;
-    margin-right: 9px;
+    margin-right: 0px;
     margin-bottom: 9px;
     cursor: pointer;
 
@@ -468,10 +468,10 @@ a:hover{
     bottom:0;
     top:0;
     position: absolute;
-    margin-top: 5px;
-    margin-right: 5px;
-    margin-left: 5px;
-    margin-bottom: 5px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: 0px;
     background-repeat:no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;

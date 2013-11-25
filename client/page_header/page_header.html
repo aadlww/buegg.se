@@ -1,24 +1,78 @@
 <head>
-<link rel="icon" type="image/ico" href="favicon.ico"/>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>{{fbname}}</title>
-<link id="theme-stylesheet" rel="stylesheet" type="text/css" href="/theme.css" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/ico" href="favicon.ico"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>{{fbname}}</title>
+	<link id="theme-stylesheet" rel="stylesheet" type="text/css" href="/theme.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <template name= "page_header">
-	<div id="pageHeader">
+    <div class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">{{fbname}}</a>
+        </div>
+        {{> headerLinks}}
+    </div>
+</template>
+
+<template name="headerLinks">
+	<div class="collapse navbar-collapse">
+	  <ul class="nav navbar-nav">
+	    <li><a id="navBtnNyheter" class="active" onclick="app.navigate('nyheter', {trigger: true});">Nyheter</a></li>
+{{#each listPages}}
+		<li><a id="navBtn{{name}}" onclick="app.navigate('page/{{name}}', {trigger: true});">{{title}}</a></li>
+{{/each}}
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
+{{#if isUserAdmin}}
+		<li><a id="navBtnAdmin" onclick="app.navigate('admin', {trigger: true});">Admin</a></li>
+{{/if}}
+	  	</ul>
+	</div><!--/.nav-collapse -->
+</template>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<template name= "page_headers">
+	<div id="page_banner">
+			<nav id="nav-wrap">
+				{{> standardLinks}}
+				{{> mobileLinks}}
+				{{loginButtons align="right"}}
+			</nav>
+		</div>
+		<div id="pageHeader">
+
 	  	<div class="page_wrapper">  
 			<div class="page_content" style="padding:0px;">
 			<!-- Header -->	
-				<img id="pageLogo" src='{{logo}}' onclick="app.navigate('/', {trigger: true});">
-				</img>
-				<div id="page_banner">
-					<nav id="nav-wrap">
-						{{> standardLinks}}
-						{{> mobileLinks}}
-					</nav>
-				</div>
+				<img id="pageLogo" src='{{logo}}' onclick="app.navigate('/', {trigger: true});"></img>
 			</div>
 		</div>
 	</div>
@@ -51,7 +105,7 @@
 </template>
 
 <template name ="navlinks">
-	<div class="navBtn" onclick="app.navigate('nyheter', {trigger: true});"> 
+	<li><div class="navBtn" onclick="app.navigate('nyheter', {trigger: true});"> 
 		Nyheter
 	</div>
 

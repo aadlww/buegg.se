@@ -2,16 +2,16 @@
 /*	border-bottom: 1px solid #DDD;
 	border-top: 4px solid #000;*/
 	color: #000;
-	background-color:#4fbe37;
+	/*background-color:#4fbe37;*/
 	/*background-color:#C3DA28;*/
     width:100%;
     margin-top:0px;
-    /*padding-left:10px;*/
-    /*padding-right:10px;*/
+    padding-left:100px;
+    padding-right:100px;
     font-size: 18px;
-    padding: 10px;
+    /*padding: 0px;*/
     max-width:730px; 
-    float:right; 
+    float:left; 
     height:47px; 
     line-height:47px;
     -webkit-border-radius: 5px;
