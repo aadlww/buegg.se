@@ -1,23 +1,23 @@
 
 
 <body>
-{{> googleAnalytics}}
-{{> alert}}
-{{> spinner}}
-{{> page_header}}
+	{{> googleAnalytics}}
+	{{> alert}}
+	{{> spinner}}
+	{{> page_header}}
 	<div class="container">
-{{> standardPage}}
+		{{> standardPage}}
 	</div>
 	<div class="container">
-{{> page_disclaimer}}
+		{{> page_disclaimer}}
 	</div>
-{{loginButtons align="right"}}
+	<center>
+		{{loginButtons}}
+	</center>
 </body>
 
 <template name ="standardPage">
-
-{{> page_controller}}
-
+	{{> page_controller}}
 </template>
 
 <!-- <template name ="title">
