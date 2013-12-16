@@ -1,22 +1,68 @@
-<template name = "page_home">
+<!-- <template name = "page_home">
 	{{#each photos}}	
-		{{> metrobox}}
+		{{> photo}}
 	{{else}}
 		{{> photo_spinner}}
 	{{/each}}
+	{{> page_footer}}
+</template> -->
+
+<template name = "page_home">
+	<div class="container marketing" >
+		<div class="row" >
+			<div class="col-lg-4" >
+				<img class="img-circle" data-src="holder.js/200x200" alt="200x200" style="width: 200px; height: 200px;" src='{{firstphoto.images.0.source}}'/>
+				<h2>Vad är {{fbname}}?</h2>
+	    		<p>{{about}}</p>
+			</div>
+			<div class="col-lg-4" >
+				<img class="img-circle" data-src="holder.js/200x200" alt="200x200" style="width: 200px; height: 200px;" src='{{secondphoto.images.0.source}}'/>
+				<h2>Välkommen!</h2>
+		    	<p>VD {{owner_name}}</p>
+		    	<img class="img" data-src="holder.js/140x140/auto" alt="140x140" src='{{owner_pic}}' />
+			</div>
+			<div class="col-lg-4" >
+				<img class="img-circle" data-src="holder.js/200x200" alt="200x200" style="width: 200px; height: 200px;" src='{{thirdphoto.images.0.source}}'/>
+	    		<h2>Kontakt</h2>
+	    		<p>Tel: {{phone}}</p>
+				<!-- E-post: patric@bügg.se<br><br>-->
+				<img class="img" data-src="holder.js/140x140/auto" alt="140x2140" src='{{logo}}' />
+			</div>
+		</div>
+	</div>
+	<div class="container marketing" >
+		<div class="row" >
+			{{#each secondthreephotos}}
+					{{> photo}}
+			{{/each}}
+		</div>
+	</div>
+	<div class="container marketing" >
+		<div class="row" >
+			{{#each thirdthreephotos}}
+					{{> photo}}
+			{{/each}}
+		</div>
+	</div>
 </template>
 
 <template name= "photo">
-		<div class="col-md-4" >
-			<img class="ad_info_thumbimg" src='{{images.0.source}}' alt ="thumb"></img>
-		</div>
+	<div class="col-lg-4" >
+		<img class="img-circle" data-src="holder.js/200x200" alt="200x200" style="width: 200px; height: 200px;" src='{{images.0.source}}'>
+	</div>
 </template>
+
+<!-- <template name= "photo">
+	<div class="col-md-4" >
+		<img class="ad_info_thumbimg" src='{{images.0.source}}' alt ="thumb"></img>
+	</div>
+</template> -->
 
 <template name = "photo_spinner">
 	<div id="spinner">
-			<center>
-				<img src="/images/loader2.gif" /><br>
-			</center>
+		<center>
+			<img src="/images/loader2.gif" /><br>
+		</center>
 	</div>
 </template>
 

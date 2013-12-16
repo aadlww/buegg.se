@@ -30,7 +30,7 @@
       "meteor-SCEditor": {
         "git": "https://github.com/LearningWellWest/meteor-SCEditor-pkg.git",
         "branch": "master",
-        "commit": "d198de460a330484ba4fde4f0769a004820eada0"
+        "commit": "d0b339b0097059c9c3be59c4a8f7734eca7893af"
       },
       "roles": {
         "git": "https://github.com/alanning/meteor-roles.git",
