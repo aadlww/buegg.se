@@ -16,17 +16,15 @@ function fbUpdate()
 		res.data.forEach(function(album) {
 			if (album.name == "Timeline Photos"){
 		 		album.photos.data.forEach(function(photo){
-		 			photo.created_time = new Date(photo.created_time);
-		 			photo.created_time = photo.created_time.toString().substring(0, 24);
-		 			//console.log(photo.created_time);
+		 			var date = new Date(photo.created_time);
+		 			photo.created_time = date;
 		 			FBPhotos.insert(photo);
 		 		});
 		 	}
 		 	if (album.name == "Mobile Uploads"){
 		 		album.photos.data.forEach(function(photo){
-		 			photo.created_time = new Date(photo.created_time);
-		 			photo.created_time = photo.created_time.toString().substring(0, 24);
-		 			//console.log(photo.created_time);
+		 			var date = new Date(photo.created_time);
+		 			photo.created_time = date;
 		 			FBPhotos.insert(photo);
 		 		});
 		 	}
