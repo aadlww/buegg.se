@@ -2,12 +2,6 @@ Pages = new Meteor.Collection("pages");
 FBPhotos = new Meteor.Collection("fbphotos");
 FBSiteInfo = new Meteor.Collection("fbsiteinfo");
 
-facebookURL = "hammarobygg"; //TODO: check if in database and if so set it
-facebookURLOwner = "patric.sundell"; //TODO: check if in database and if so set it
-facebookPostsLimit = 32; //TODO: check if in database and if so set it
-loadingMsg = 'Välkommen!'; //TODO: check if in database and if so set it
-loadingIcon = '/images/loader2.gif'; //TODO: check if in database and if so set it
-
 function fbUpdate()
 {
 	console.log('Updating from facebook...');

@@ -5,7 +5,7 @@
 // }
 
 
-Template.nyheter.posts = function (){
+Template.page_posts.posts = function (){
 	photos = FBPhotos.find({},{sort: {created_time: -1}});
 	// console.log(photos);
 
@@ -21,7 +21,7 @@ Template.nyheter.posts = function (){
 	return FBPhotos.find({},{sort: {created_time: -1}});
 };
 
-Template.nyheter.index = function() {
+Template.page_posts.index = function() {
      return FBPhotos.find().count() - FBPhotos.find({_id: {$lte: this._id}},{sort: {created_time: -1}}).count() + 1;
 };
 

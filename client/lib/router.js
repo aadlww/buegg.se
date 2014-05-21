@@ -4,14 +4,13 @@
 Router = Backbone.Router.extend({
   routes: {
     "":                       "main",
-    "nyheter":                "nyheter",
+    "nyheter":                "page_posts",
     "admin":                  "admin",
     "admin/:page":            "admin",
     "editPage/:name":         "editPage",
     "page/:page":             "page",
     "*undefined":             "show404Error"
   },
-
 
   main: function() {
     Session.set('currentPage','page_home');
@@ -33,10 +32,10 @@ Router = Backbone.Router.extend({
     }
   else{
     this.show404Error();
+    }
   }
-}
-,
-page: function(page) {
+  ,
+  page: function(page) {
     document.title = "Hammarö Bygg & Kakel";
     if(page){
       Session.set('customPage',decodeURIComponent(page));
@@ -47,15 +46,15 @@ page: function(page) {
     }
   }
   ,
-nyheter: function() {
-  document.title = "Nyheter - Hammarö Bygg & Kakel";
-  Session.set('currentPage','nyheter');
-}
-,
-show404Error: function() {
-  document.title = "404 - Hammarö Bygg & Kakel";
-  Session.set('currentPage','page_not_found');
-}
+  page_posts: function() {
+    document.title = "Nyheter - Hammarö Bygg & Kakel";
+    Session.set('currentPage','page_posts');
+  }
+  ,
+  show404Error: function() {
+    document.title = "404 - Hammarö Bygg & Kakel";
+    Session.set('currentPage','page_not_found');
+  }
 });
 
 
