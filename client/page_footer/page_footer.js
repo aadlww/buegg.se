@@ -76,3 +76,7 @@ Template.page_footer.logo = function(){
     return site[0].logo;
   }
 };
+
+Template.page_footer.facebookURL = function(){
+    return facebookURL
+};

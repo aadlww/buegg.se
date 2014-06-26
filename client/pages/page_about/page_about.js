@@ -1,52 +1,44 @@
 
-// Template.page_home.rendered = function ( ) {
+// Template.page_about.rendered = function ( ) {
 // 	//console.log('ad_list rendered');
 // 	$('#home_content').fadeIn();
 // };
 
-//Template.page_home.photos = function (){
-//	photos = FBPhotos.find({},{sort: {created_time: -1}});
-//	// console.log(photos);
-//	return FBPhotos.find({},{sort: {created_time: -1}});
-//};
-//
-//Template.no_carousel.firstphoto = function (){
-//	photo = FBPhotos.find({},{sort: {created_time: -1}, limit: 1}).fetch();
-//	// console.log(photo[0]);
-//	return photo[0];
-//};
-//Template.no_carousel.secondphoto = function (){
-//	photo = FBPhotos.find({},{sort: {created_time: -1}, skip: 1, limit: 1}).fetch();
-//	// console.log(photo[0]);
-//	return photo[0];
-//};
-//Template.no_carousel.thirdphoto = function (){
-//	photo = FBPhotos.find({},{sort: {created_time: -1}, skip: 2, limit: 1}).fetch();
-//	// console.log(photo[0]);
-//	return photo[0];
-//};
-
-Template.page_carousel.firstthreephotos = function (){
-    return FBPhotos.find({},{sort: {created_time: -1}, limit: 3});
+Template.page_about.photos = function (){
+	photos = FBPhotos.find({},{sort: {created_time: -1}});
+	// console.log(photos);
+	return FBPhotos.find({},{sort: {created_time: -1}});
 };
 
-Template.page_carousel.secondthreephotos = function (){
-    return FBPhotos.find({},{sort: {created_time: -1}, skip: 3, limit: 3});
+Template.page_about.firstphoto = function (){
+	photo = FBPhotos.find({},{sort: {created_time: -1}, limit: 1}).fetch();
+	// console.log(photo[0]);
+	return photo[0];
+};
+Template.page_about.secondphoto = function (){
+	photo = FBPhotos.find({},{sort: {created_time: -1}, skip: 1, limit: 1}).fetch();
+	// console.log(photo[0]);
+	return photo[0];
+};
+Template.page_about.thirdphoto = function (){
+	photo = FBPhotos.find({},{sort: {created_time: -1}, skip: 2, limit: 1}).fetch();
+	// console.log(photo[0]);
+	return photo[0];
 };
 
-Template.page_no_carousel.firstthreephotos = function (){
+Template.page_about.firstthreephotos = function (){
 	return FBPhotos.find({},{sort: {created_time: -1}, limit: 3});
 };
 
-Template.page_no_carousel.secondthreephotos = function (){
+Template.page_about.secondthreephotos = function (){
 	return FBPhotos.find({},{sort: {created_time: -1}, skip: 3, limit: 3});
 };
 
-Template.page_no_carousel.thirdthreephotos = function (){
+Template.page_about.thirdthreephotos = function (){
 	return FBPhotos.find({},{sort: {created_time: -1}, skip: 6, limit: 3});
 };
 
-// Template.page_home.logo = function(){
+// Template.page_about.logo = function(){
 //   var site = FBSiteInfo.find({site: facebookURL}).fetch();
 //   if (site.length > 0)
 //   {
@@ -82,7 +74,7 @@ Template.page_no_carousel.thirdthreephotos = function (){
 //         return ((m % n) + n) % n;
 // };
 
-Template.fb_marketing.about = function(){
+Template.page_about.about = function(){
 	var site = FBSiteInfo.find({site: facebookURL}).fetch();
 	if (site.length > 0)
 	{
@@ -91,7 +83,7 @@ Template.fb_marketing.about = function(){
 	}
 };
 
-Template.fb_marketing.fbname = function(){
+Template.page_about.fbname = function(){
 	var site = FBSiteInfo.find({site: facebookURL}).fetch();
 	if (site.length > 0)
 	{
@@ -100,7 +92,7 @@ Template.fb_marketing.fbname = function(){
 	}
 };
 
-Template.fb_marketing.phone = function(){
+Template.page_about.phone = function(){
 	var site = FBSiteInfo.find({site: facebookURL}).fetch();
 	if (site.length > 0)
 	{
@@ -109,7 +101,7 @@ Template.fb_marketing.phone = function(){
 	}
 };
 
-Template.fb_marketing.posts = function(){
+Template.page_about.posts = function(){
 	var site = FBSiteInfo.find({site: facebookURL}).fetch();
 	if (site.length > 0)
 	{
@@ -118,7 +110,7 @@ Template.fb_marketing.posts = function(){
 	}
 };
 
-Template.fb_marketing.owner_name = function(){
+Template.page_about.owner_name = function(){
 	var site = FBSiteInfo.find({site: facebookURL}).fetch();
 	if (site.length > 0)
 	{
@@ -127,7 +119,7 @@ Template.fb_marketing.owner_name = function(){
 	}
 };
 
-Template.fb_marketing.owner_pic = function(){
+Template.page_about.owner_pic = function(){
 	var site = FBSiteInfo.find({site: facebookURL}).fetch();
 	if (site.length > 0)
 	{
@@ -137,7 +129,7 @@ Template.fb_marketing.owner_pic = function(){
 	return loadingIcon;
 };
 
-Template.fb_marketing.logo = function(){
+Template.page_about.logo = function(){
   var site = FBSiteInfo.find({site: facebookURL}).fetch();
   if (site.length > 0)
   {

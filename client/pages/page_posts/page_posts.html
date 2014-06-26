@@ -1,5 +1,8 @@
 <template name="page_posts">
-	{{#each posts}}
+    <div class="jumbotron">
+    </div>
+    <div class="container marketing" >
+    {{#each posts}}
 	  {{#if_even index}}
 	  	{{> post_left}}
 	  {{/if_even}}
@@ -7,6 +10,7 @@
 	  	{{> post_right}}
 	  {{/if_odd}}
 	{{/each}}
+    </div>
 </template>
 
 <!-- <template name="nyheter">

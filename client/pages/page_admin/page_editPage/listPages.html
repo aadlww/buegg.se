@@ -5,9 +5,21 @@
 
 	<form id='pages-form'>
 		<fieldset>
-			<legend>Lägg till ny sida</legend>
+			<legend>Settings</legend>
 			<div>
-				<label for="newPageName">URL-Namn:</label>
+				<label for="siteName">Site name</label>
+				<input id="siteName" type="text" maxlength="30"></input><br>
+				<br>
+				<i>{{urlText}}</i>
+			</div>
+			<div>
+				<!-- <input type="button" class="btn btn-default" id='newPageBtn' value="Add"/> -->
+			</div>
+		</fieldset>
+		<fieldset>
+			<legend>Add new page</legend>
+			<div>
+				<label for="newPageName">Route name</label>
 				<input id="newPageName" type="text" maxlength="30"></input><br>
 				<br>
 				<i>{{urlText}}</i>

@@ -19,3 +19,7 @@ Template.page_disclaimer.rendered = function(){
 	}(document, 'script', 'facebook-jssdk'));
 
 };
+
+Template.page_disclaimer.facebookURL = function(){
+    return facebookURL
+};

@@ -3,7 +3,6 @@
 //   var container = $("#nav");
 //   var container2 = $("#menu-icon");
 //   var container3 = $("#menu-icon-img");
-
 //   if (!container.is(e.target)&& !container2.is(e.target)&& !container3.is(e.target))
 //     {
 //       $("#nav").slideUp();
@@ -21,7 +20,7 @@
 //     $("#nav").slideUp();
 //     $('.selected').removeClass('selected');
 //     $(e.currentTarget).addClass('selected');
-//   } 
+//   }
 // };
 
 
@@ -40,7 +39,12 @@ Template.page_header.fbname = function(){
   if (site.length > 0)
   {
     console.log(site[0].name);
+    document.title = site[0].name;
     return site[0].name;
+  }
+  else
+  {
+      document.title = 'Could not get FB name!';
   }
 };
 
