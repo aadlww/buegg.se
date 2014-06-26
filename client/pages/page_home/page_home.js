@@ -46,6 +46,21 @@ Template.page_no_carousel.thirdthreephotos = function (){
 	return FBPhotos.find({},{sort: {created_time: -1}, skip: 6, limit: 3});
 };
 
+Template.carousel.firstcart = function (){
+    photo = FBCarousel.find({},{sort: {created_time: -1}, limit: 1}).fetch();
+	return photo[0];
+};
+
+Template.carousel.secondcart = function (){
+    photo = FBCarousel.find({},{sort: {created_time: -1}, skip: 1, limit: 1}).fetch();
+    return photo[0];
+};
+
+Template.carousel.thirdcart = function (){
+    photo = FBCarousel.find({},{sort: {created_time: -1}, skip: 2, limit: 1}).fetch();
+    return photo[0];
+};
+
 // Template.page_home.logo = function(){
 //   var site = FBSiteInfo.find({site: facebookURL}).fetch();
 //   if (site.length > 0)

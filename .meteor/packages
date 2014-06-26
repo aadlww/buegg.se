@@ -5,7 +5,6 @@
 
 standard-app-packages
 insecure
-preserve-inputs
 accounts-password
 accounts-ui
 accounts-facebook
@@ -14,3 +13,4 @@ fbgraph
 cron
 bootstrap-3
 jquery-ui
+bootstrap3-wysihtml5

@@ -4,17 +4,14 @@
     "basePackages": {
       "collectionFS": {},
       "canvas-image-manipulation": {},
-      "meteor-SCEditor": {
-        "git": "https://github.com/LearningWellWest/meteor-SCEditor-pkg.git",
-        "branch": "master"
-      },
       "roles": {},
       "jquery-ui": {},
       "toastjs": {},
       "cron": {},
       "accounts-ui-bootstrap-dropdown": {},
       "bootstrap-3": {},
-      "jquery-ui-bootstrap": {}
+      "jquery-ui-bootstrap": {},
+      "bootstrap3-wysihtml5": {}
     },
     "packages": {
       "collectionFS": {
@@ -27,15 +24,10 @@
         "tag": "v0.1.0",
         "commit": "bd29971e84b1f37168bca4548f621df26845c978"
       },
-      "meteor-SCEditor": {
-        "git": "https://github.com/LearningWellWest/meteor-SCEditor-pkg.git",
-        "branch": "master",
-        "commit": "d0b339b0097059c9c3be59c4a8f7734eca7893af"
-      },
       "roles": {
         "git": "https://github.com/alanning/meteor-roles.git",
-        "tag": "v1.2.9",
-        "commit": "969b17fac5dfec66b6b12bfce4e37471d1a241d4"
+        "tag": "v1.2.10",
+        "commit": "7ccb35de0a6cb0c9a0c3666badd04757e39c09a6"
       },
       "jquery-ui": {
         "git": "https://github.com/TimHeckel/meteor-jquery-ui.git",
@@ -66,6 +58,11 @@
         "git": "https://github.com/TimHeckel/meteor-jquery-ui-bootstrap.git",
         "tag": "v0.1.2",
         "commit": "fa742a85639307003e105898e15b631394b63509"
+      },
+      "bootstrap3-wysihtml5": {
+        "git": "https://github.com/andreioprisan/meteor-bootstrap3-wysihtml5.git",
+        "tag": "v0.3.3",
+        "commit": "251d564c3eb5b5b7a89a3e3e63f58633e0816332"
       },
       "cfs-base-package": {
         "git": "https://github.com/CollectionFS/Meteor-cfs-base-package.git",
@@ -109,8 +106,8 @@
       },
       "cfs-storage-adapter": {
         "git": "https://github.com/CollectionFS/Meteor-cfs-storage-adapter.git",
-        "tag": "v0.0.26",
-        "commit": "cb9808ec519f8673d2cc4cc881b6eda9e56bdead"
+        "tag": "v0.0.28",
+        "commit": "8e0513815501d79b3d531a64f80717b4e9a34a42"
       },
       "http-methods": {
         "git": "https://github.com/CollectionFS/Meteor-http-methods.git",
@@ -164,8 +161,8 @@
       },
       "cfs-graphicsmagick": {
         "git": "https://github.com/CollectionFS/Meteor-cfs-graphicsmagick.git",
-        "tag": "v0.0.12",
-        "commit": "3ab945c2018aad2316eabf85ac1814e76a8ed627"
+        "tag": "v0.0.14",
+        "commit": "a9178346f25b0556f1470c7b8e97925ab5f534a9"
       },
       "cfs-ejson-file": {
         "git": "https://github.com/CollectionFS/Meteor-cfs-ejson-file.git",

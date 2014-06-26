@@ -1,62 +1,48 @@
 <template name="listPages">
-<div class="listPages">
+    <div class="listPages">
+        <form id='pages-form'>
+            <fieldset>
+                <legend>Add new page</legend>
+                <div>
+                    <label for="newPageName">Route name</label>
+                    <input id="newPageName" type="text" maxlength="30">
+                    <br>
+                    <br>
+                    <i>{{urlText}}</i>
+                </div>
+                <div>
+                    <input type="button" class="btn btn-default" id='newPageBtn' value="Lägg till"/>
+                </div>
+            </fieldset>
+        </form>
 
+        <h3>Sidor</h3>
+        <table id="pagesTable">
+            <tr>
+                <th>Namn</th>
+                <th>Titel</th>
+                <th></th>
+                <th></th>
+            </tr>
+            {{#each pages}}
+            <tr>
+                <td>{{name}}</td>
+                <td>{{title}}</td>
+                <td style="width:30px;">
+                    <button value="{{name}}" class="btn-yellow"> Ändra</button>
+                </td>
+                <td style="width:30px;">
+                    {{#if required}}
+                    {{else}}
 
+                    <button value="{{name}}" class="btn-red">
+                        x
+                    </button>
 
-	<form id='pages-form'>
-		<fieldset>
-			<legend>Settings</legend>
-			<div>
-				<label for="siteName">Site name</label>
-				<input id="siteName" type="text" maxlength="30"></input><br>
-				<br>
-				<i>{{urlText}}</i>
-			</div>
-			<div>
-				<!-- <input type="button" class="btn btn-default" id='newPageBtn' value="Add"/> -->
-			</div>
-		</fieldset>
-		<fieldset>
-			<legend>Add new page</legend>
-			<div>
-				<label for="newPageName">Route name</label>
-				<input id="newPageName" type="text" maxlength="30"></input><br>
-				<br>
-				<i>{{urlText}}</i>
-			</div>
-			<div>
-				<input type="button" class="btn btn-default" id='newPageBtn' value="Lägg till"/>
-			</div>
-		</fieldset>
-	</form>
-
-	<h3>Sidor</h3>
-		<table id="pagesTable">
-			<tr>
-			<th>Namn</th>
-			<th>Titel</th>
-    		<th></th>
-    		<th></th>
-    	</tr>
-		{{#each pages}}
-			<tr>
-				<td>{{name}}</td>
-				<td>{{title}}</td>
-				<td style="width:30px;">
-					<button value="{{name}}" class="btn-yellow"> Ändra</button>
-				</td>
-				<td style="width:30px;">
-				{{#if required}}
-				{{else}}
-				
-					<button value="{{name}}" class="btn-red">
-					x
-				</button>
-				
-				{{/if}}
-				</td>
-			</tr>
-		{{/each}}
-	</table>
-</div>
+                    {{/if}}
+                </td>
+            </tr>
+            {{/each}}
+        </table>
+    </div>
 </template>

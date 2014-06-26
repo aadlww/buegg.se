@@ -1,18 +1,16 @@
 Template.page_editPage.rendered = function(){
 	var pageContent = Pages.findOne({name:Session.get('editPage')});
-	if(pageContent){
-    	$('#updateContent').val(pageContent.content);
-		$("#updateContent").sceditor({
-		plugins: "xhtml",
-		style: "minified/jquery.sceditor.default.min.css"
-		});
-	}
+
+        console.log("Starting WYSIWYG");
+        if(pageContent)
+    	    $('#editor').val(pageContent.content);
+        $('#editor').wysihtml5();
 }
 
 Template.page_editPage.events({
 	'click #updatePageBtn': function(){
 		var title = $('#updateTitle').val();
-		var content = $('#updateContent').sceditor('instance').val();
+		var content = $('#editor').val();
 		Meteor.call('editPage', Session.get('editPage'),{title:title,content:content},function(err){
 			if(err){
 				showError(err);

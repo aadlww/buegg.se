@@ -17,6 +17,9 @@ if (Meteor.isClient) {
   // Subscribe to facebook site info
   Meteor.subscribe('fbsiteinfo');
 
+  // Subscribe to facebook carousel
+  Meteor.subscribe('fbcarousel');
+
   //Session variable for the spinner
   Session.setDefault('loading',false);
 

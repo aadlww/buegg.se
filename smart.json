@@ -2,15 +2,13 @@
   "packages": {
     "collectionFS": {},
     "canvas-image-manipulation": {},
-    "meteor-SCEditor": {
-      "git": "https://github.com/LearningWellWest/meteor-SCEditor-pkg.git"
-    },
     "roles": {},
     "jquery-ui": {},
     "toastjs": {},
     "cron": {},
     "accounts-ui-bootstrap-dropdown": {},
     "bootstrap-3": {},
-    "jquery-ui-bootstrap": {}
+    "jquery-ui-bootstrap": {},
+    "bootstrap3-wysihtml5": {}
   }
 }

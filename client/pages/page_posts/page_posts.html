@@ -3,12 +3,12 @@
     </div>
     <div class="container marketing" >
     {{#each posts}}
-	  {{#if_even index}}
+	  {{#if left}}
 	  	{{> post_left}}
-	  {{/if_even}}
-	  {{#if_odd index}}
+	  {{/if}}
+	  {{#if right}}
 	  	{{> post_right}}
-	  {{/if_odd}}
+	  {{/if}}
 	{{/each}}
     </div>
 </template>
@@ -20,9 +20,9 @@
 	{{> page_footer}}
 </template>
  -->
-<template name="post">
+<!--<template name="post">
 	{{> post_left}}
-</template>
+</template>-->
 
 <!-- <template name="post">
 	{{#if isEven}}
@@ -49,11 +49,11 @@
 <template name= "post_right">
   <div class="row featurette">
     <div class="col-md-7">
-      <h2 class="featurette-heading"><span class="text-muted">{{name}}</span></h2>
-      <p class="lead">{{created_time}}</p>
+      <h2 class="featurette-heading"><span class="text-muted">{{photo.name}}</span></h2>
+      <p class="lead">{{photo.created_time}}</p>
     </div>
     <div class="col-md-5">
-      <img class="featurette-image img-responsive" data-src="holder.js/500x500" alt="500x500" src='{{images.0.source}}'>
+      <img class="featurette-image img-responsive" data-src="holder.js/500x500" alt="500x500" src='{{photo.images.[0].source}}'>
     </div>
   </div>
   <hr class="featurette-divider">
@@ -62,11 +62,11 @@
 <template name= "post_left">
   <div class="row featurette">
     <div class="col-md-5">
-      <img class="featurette-image img-responsive" data-src="holder.js/500x500" alt="500x500" src='{{images.0.source}}'>
+      <img class="featurette-image img-responsive" data-src="holder.js/500x500" alt="500x500" src='{{photo.images.[0].source}}'>
     </div>
     <div class="col-md-7">
-      <h2 class="featurette-heading"><span class="text-muted">{{name}}</span></h2>
-      <p class="lead">{{created_time}}</p>
+      <h2 class="featurette-heading"><span class="text-muted">{{photo.name}}</span></h2>
+      <p class="lead">{{photo.created_time}}</p>
     </div>
   </div>
   <hr class="featurette-divider">

@@ -6,24 +6,31 @@
 
 
 Template.page_posts.posts = function (){
-	photos = FBPhotos.find({},{sort: {created_time: -1}});
-	// console.log(photos);
+	var _photos = FBPhotos.find({},{sort: {created_time: -1}}).fetch();
+	result = [];
+    n = 1;
+    if(_photos.length > 0) {
+        _photos.forEach(function (_photo) {
 
-	// result = [];
- //    n = 1;
- //    photos.forEach(function(_photo) {
- //    	result.push({index:n, photo:_photo});
- //    	n++;
-	// });
-
-	// console.log(result);
-
-	return FBPhotos.find({},{sort: {created_time: -1}});
+            result.push({index:n, photo:_photo});
+            n++;
+        });
+    }
+	return result;//FBPhotos.find({},{sort: {created_time: -1}});
 };
 
-Template.page_posts.index = function() {
-     return FBPhotos.find().count() - FBPhotos.find({_id: {$lte: this._id}},{sort: {created_time: -1}}).count() + 1;
-};
+Template.page_posts.helpers({
+    left: function() {
+        return (this.index % 2) === 0;
+    },
+    right: function() {
+        return (this.index % 2) === 1;
+    }
+});
+
+//Template.page_posts.index = function() {
+//     return FBPhotos.find().count() - FBPhotos.find({_id: {$lte: this._id}},{sort: {created_time: -1}}).count() + 1;
+//};
 
 // Template.nyheter.isEven = function() {
 // 	index = FBPhotos.find().count() - FBPhotos.find({_id: {$lte: this._id}}).count() + 1;
@@ -32,9 +39,10 @@ Template.page_posts.index = function() {
 // 	return options.inverse(this);
 // };
 
+/*
 Handlebars.registerHelper('if_even', function(conditional, options) {
 	if((conditional % 2) == 0) {
-		// console.log("even: " + conditional);
+		console.log("even: " + conditional);
 		return options.fn(this);
 	} else {
 		return options.inverse(this);
@@ -45,7 +53,7 @@ Handlebars.registerHelper('if_odd', function(conditional, options) {
 	if((conditional % 2) == 0) {
 		return options.inverse(this);
 	} else {
-		// console.log("odd: " + conditional);
+		console.log("odd: " + conditional);
 		return options.fn(this);
 	}
-});
+});*/

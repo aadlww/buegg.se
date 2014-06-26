@@ -83,22 +83,22 @@
 
 
 <template name= "page_headers">
-	<div id="page_banner">
-			<nav id="nav-wrap">
-				{{> standardLinks}}
-				{{> mobileLinks}}
-				{{loginButtons align="right"}}
-			</nav>
-		</div>
-		<div id="pageHeader">
+    <div id="page_banner">
+        <nav id="nav-wrap">
+            {{> standardLinks}}
+            {{> mobileLinks}}
+            {{loginButtons align="right"}}
+        </nav>
+    </div>
+    <div id="pageHeader">
 
-	  	<div class="page_wrapper">  
-			<div class="page_content" style="padding:0px;">
-			<!-- Header -->	
-				<img id="pageLogo" src='{{logo}}' onclick="app.navigate('/', {trigger: true});"></img>
-			</div>
-		</div>
-	</div>
+        <div class="page_wrapper">
+            <div class="page_content" style="padding:0px;">
+                <!-- Header -->
+                <img id="pageLogo" src='{{logo}}' onclick="app.navigate('/', {trigger: true});">
+            </div>
+        </div>
+    </div>
 </template>
 
 <template name="mobileLinks">
@@ -128,15 +128,17 @@
 </template>
 
 <template name ="navlinks">
-	<li><div class="navBtn" onclick="app.navigate('nyheter', {trigger: true});"> 
-		Nyheter
-	</div>
+    <li>
+        <div class="navBtn" onclick="app.navigate('nyheter', {trigger: true});">
+            Nyheter
+        </div>
+    </li>
 
-	{{#each listPages}}
-		<div id="navBtn{{name}}" class="navBtn" onclick="app.navigate('page/{{name}}', {trigger: true});">
-			{{title}}
-		</div>
-	{{/each}}
+    {{#each listPages}}
+    <div id="navBtn{{name}}" class="navBtn" onclick="app.navigate('page/{{name}}', {trigger: true});">
+        {{title}}
+    </div>
+    {{/each}}
 </template>
 
 

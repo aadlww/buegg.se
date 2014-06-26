@@ -4,15 +4,13 @@
     <div class="container marketing" >
         {{#if isUserAdmin}}
             <div id ="page_admin">
-                <p>
-                    {{#if displayPage}}
-                        {{{displayPage}}}
-                    {{else}}
-                    <p>
-                    <center>
-                        <input type='button' class="btn" style='width:100%' onclick="app.navigate('admin/handlePages', {trigger: true});" value="Hantera sidor" />
-                    </center>
-                    {{/if}}
+                {{#if displayPage}}
+                    {{> displayPage}}
+                {{else}}
+                <center>
+                    <input type='button' class="btn" style='width:100%' onclick="app.navigate('admin/handlePages', {trigger: true});" value="Hantera sidor" />
+                </center>
+                {{/if}}
             </div>
         {{else}}
             {{> page_not_found}}

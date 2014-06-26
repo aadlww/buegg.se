@@ -10,3 +10,7 @@ Meteor.publish("fbphotos", function(){
 Meteor.publish("fbsiteinfo", function(){
 	return FBSiteInfo.find();
 });
+
+Meteor.publish("fbcarousel", function(){
+    return FBCarousel.find();
+});
