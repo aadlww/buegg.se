@@ -40,7 +40,7 @@ i18n.map('sv_SE', {
     home: {
         what_is: 'Vad är',
         welcome: 'Välkommen till',
-        contact: 'Kontakta oss gärna på:'
+        contact: 'Kontakta oss gärna'
     },
     links: {
         home: 'Hem',
