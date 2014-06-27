@@ -2,7 +2,7 @@
  * Created by andersaslund on 2014-06-27.
  */
 // Set a default language.
-i18n.setDefaultLanguage('en_US');
+i18n.setDefaultLanguage('sv_SE');
 
 // Our translated strings.
 i18n.map('en_US', {
@@ -62,7 +62,7 @@ i18n.map('sv_SE', {
     },
     about: {
         about: 'Om',
-        mission: 'Aspiration',
+        mission: 'Mål',
         description: 'Beskrivning'
     }
 });
