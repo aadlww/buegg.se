@@ -4,7 +4,7 @@
 Router = Backbone.Router.extend({
   routes: {
     "":                       "main",
-    "nyheter":                "page_posts",
+    "news":                   "page_posts",
     "admin":                  "admin",
     "admin/:page":            "admin",
     "editPage/:name":         "editPage",
@@ -15,17 +15,14 @@ Router = Backbone.Router.extend({
   main: function() {
     Session.set('currentPage','page_home');
     $('.selected').removeClass('selected');
-    document.title = "Hammarö Bygg & Kakel";
   }
   ,
   admin: function(page) {
-    document.title = "Admin - Hammarö Bygg & Kakel";
     Session.set('currentPage','page_admin');
     Session.set('currentPageAdmin','admin_handlePages');
   }
   ,
   editPage: function(name) {
-    document.title = " Hantera sidor - Hammarö Bygg & Kakel";
     if(name){
       Session.set('editPage',decodeURIComponent(name));
       Session.set('currentPage','page_editPage');
@@ -36,7 +33,6 @@ Router = Backbone.Router.extend({
   }
   ,
   page: function(page) {
-    document.title = "Hammarö Bygg & Kakel";
     if(page){
       Session.set('customPage',decodeURIComponent(page));
       Session.set('currentPage','page_page');
@@ -47,12 +43,10 @@ Router = Backbone.Router.extend({
   }
   ,
   page_posts: function() {
-    document.title = "Nyheter - Hammarö Bygg & Kakel";
     Session.set('currentPage','page_posts');
   }
   ,
   show404Error: function() {
-    document.title = "404 - Hammarö Bygg & Kakel";
     Session.set('currentPage','page_not_found');
   }
 });

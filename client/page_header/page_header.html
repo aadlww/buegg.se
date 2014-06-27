@@ -26,33 +26,17 @@
                         </button>
                         <a class="navbar-brand" href="#" onclick="app.navigate('', {trigger: true}); return false;">{{fbname}}</a>
                     </div>
-                    <div class="navbar-collapse collapse">
+                    <div id="navbar-collapse" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
-                            <li><a id="navBtnNyheter" onclick="app.navigate('nyheter', {trigger: true});">Nyheter</a></li>
+                            <li class="active"><a id="navBtnHome" class="navBtn" onclick="app.navigate('', {trigger: true});">Home</a></li>
+                            <li><a class="navBtn" onclick="app.navigate('news', {trigger: true});">News</a></li>
                             {{#each listPages}}
-                            <li><a id="navBtn{{name}}" onclick="app.navigate('page/{{name}}', {trigger: true});">{{title}}</a></li>
+                                <li><a class="navBtn" onclick="app.navigate('page/{{name}}', {trigger: true});">{{title}}</a></li>
                             {{/each}}
                             {{#if isUserAdmin}}
-                            <li><a id="navBtnAdmin" onclick="app.navigate('admin', {trigger: true});">Admin</a></li>
+                                <li><a class="navBtn" onclick="app.navigate('admin', {trigger: true});">Admin</a></li>
                             {{/if}}
                         </ul>
-                        <!--<ul class="nav navbar-nav">
-                            <li class="active"><a href="#">Home</a></li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Action</a></li>
-                                    <li><a href="#">Another action</a></li>
-                                    <li><a href="#">Something else here</a></li>
-                                    <li class="divider"></li>
-                                    <li class="dropdown-header">Nav header</li>
-                                    <li><a href="#">Separated link</a></li>
-                                    <li><a href="#">One more separated link</a></li>
-                                </ul>
-                            </li>
-                        </ul>-->
                     </div>
                 </div>
             </div>
@@ -60,113 +44,3 @@
         </div>
     </div>
 </template>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<template name= "page_headers">
-    <div id="page_banner">
-        <nav id="nav-wrap">
-            {{> standardLinks}}
-            {{> mobileLinks}}
-            {{loginButtons align="right"}}
-        </nav>
-    </div>
-    <div id="pageHeader">
-
-        <div class="page_wrapper">
-            <div class="page_content" style="padding:0px;">
-                <!-- Header -->
-                <img id="pageLogo" src='{{logo}}' onclick="app.navigate('/', {trigger: true});">
-            </div>
-        </div>
-    </div>
-</template>
-
-<template name="mobileLinks">
-	<div id ="navlinks_mobile">
-		<div id="menu-icon" > 
-			<img id="menu-icon-img" src="/images/menu-icon.png"/> 
-			MENY 
-		</div>
-			<div id="nav">
-			{{> navlinks}}
-		</div>
-	</div>
-</template>
- 
-<template name="standardLinks">
-	<div id="navlinksStandard">
-		{{> navlinks}}
- 		<div style ='float:right'>
-			{{#if isUserAdmin}}
-			<div class="navBtn" onclick="app.navigate('admin', {trigger: true});"> 
-				Admin
-			</div>
-			{{/if}}
-		</div>
-	</div>
-
-</template>
-
-<template name ="navlinks">
-    <li>
-        <div class="navBtn" onclick="app.navigate('nyheter', {trigger: true});">
-            Nyheter
-        </div>
-    </li>
-
-    {{#each listPages}}
-    <div id="navBtn{{name}}" class="navBtn" onclick="app.navigate('page/{{name}}', {trigger: true});">
-        {{title}}
-    </div>
-    {{/each}}
-</template>
-
-
-<!--	<div class="navbar navbar-default navbar-fixed-top">
-<div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#" onclick="app.navigate('', {trigger: true}); return false;">{{fbname}}</a>
-    </div>
-    <div class="collapse navbar-collapse">
-        <ul class="nav navbar-nav">
-            <li><a id="navBtnNyheter" onclick="app.navigate('nyheter', {trigger: true});">Nyheter</a></li>
-            {{#each listPages}}
-            <li><a id="navBtn{{name}}" onclick="app.navigate('page/{{name}}', {trigger: true});">{{title}}</a></li>
-            {{/each}}
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-            {{#if isUserAdmin}}
-            <li><a id="navBtnAdmin" onclick="app.navigate('admin', {trigger: true});">Admin</a></li>
-            {{/if}}
-          </ul>
-    </div>&lt;!&ndash;/.nav-collapse &ndash;&gt;
-	    </div>
-	</div>
-	<div class="jumbotron">
-	</div>-->

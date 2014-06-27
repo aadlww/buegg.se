@@ -1,34 +1,18 @@
-// $(document).mouseup(function (e)
-// {
-//   var container = $("#nav");
-//   var container2 = $("#menu-icon");
-//   var container3 = $("#menu-icon-img");
-//   if (!container.is(e.target)&& !container2.is(e.target)&& !container3.is(e.target))
-//     {
-//       $("#nav").slideUp();
-//       // $(this).toggleClass("active");
-//     }
-// });
-
-// Template.page_header.events ={
-//   'click #menu-icon': function () {
-//     $("#nav").slideToggle();
-//     $(this).toggleClass("active");
-//   },
-//   'click .navBtn': function (e) {
-//     if($(e.currentTarget).attr('id')){}
-//     $("#nav").slideUp();
-//     $('.selected').removeClass('selected');
-//     $(e.currentTarget).addClass('selected');
-//   }
-// };
-
-
-// Template.page_header.helpers({
-//   listPages: function(){
-//     return Pages.find();
-//   }
-// });
+Template.page_header.events ={
+   'click .navbar-brand': function () {
+       $('.active').removeClass('active');
+       $("#navBtnHome").parent().addClass('active');
+   },
+   'click .navbar-toggle': function () {
+     $("#navbar-collapse").slideToggle();
+   },
+   'click .navBtn': function (e) {
+     if($(e.currentTarget).attr('id')){}
+     $("#navbar-collapse").slideUp();
+     $('.active').removeClass('active');
+     $(e.currentTarget).parent().addClass('active');
+   }
+};
 
 Template.page_header.listPages = function(){
   return Pages.find();

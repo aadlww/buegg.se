@@ -14,9 +14,7 @@ Template.page_controller.helpers({
         var page_name = Session.get('currentPage');
         console.log(page_name);
         var page = Template[page_name];
-//		if(page){
-//			document.title = page.title+ " - Hammarö Bygg & Kakel";
-//		}
+
         return page;
     }
 });*/
