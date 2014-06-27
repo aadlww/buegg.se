@@ -44,12 +44,6 @@ Handlebars.registerHelper('arrayify',function(obj){
       if (Meteor.user().profile.name == 'Anders Åslund') {
          return true;
       }
-      if (Meteor.user().profile.name == 'Patric Sundell') {
-         return true;
-      }
-      if (Meteor.user().profile.name == 'Torbjörn Andersson') {
-         return true;
-      }
     }
     return false;
   });

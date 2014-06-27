@@ -10,8 +10,9 @@ Template.page_editPage.rendered = function(){
 Template.page_editPage.events({
 	'click #updatePageBtn': function(){
 		var title = $('#updateTitle').val();
+        var route = $('#updateRoute').val();
 		var content = $('#editor').val();
-		Meteor.call('editPage', Session.get('editPage'),{title:title,content:content},function(err){
+		Meteor.call('editPage', Session.get('editPage'),{title:title,route:route,content:content},function(err){
 			if(err){
 				showError(err);
 			}

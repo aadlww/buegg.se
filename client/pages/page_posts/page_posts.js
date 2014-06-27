@@ -11,8 +11,8 @@ Template.page_posts.posts = function (){
     n = 1;
     if(_photos.length > 0) {
         _photos.forEach(function (_photo) {
-
-            result.push({index:n, photo:_photo});
+            var res = _photo.name.split('.',3);
+            result.push({index:n, photo:_photo, text:res[0], muted:res[1], rest:res[2]});
             n++;
         });
     }

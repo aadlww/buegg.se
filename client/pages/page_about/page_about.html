@@ -1,4 +1,36 @@
 <template name = "page_about">
+    {{> about_cover}}
+    <div class="container marketing" >
+        <div class="row">
+            <div class="col-md-4">
+                <h2>About</h2>
+                <p>{{about_text}}</p>
+            </div>
+            <div class="col-md-8">
+                <h2>Mission</h2>
+                <p>{{mission}}</p>
+            </div>
+            <!--<div class="col-md-4">-->
+                <!--<h2>Heading</h2>-->
+                <!--<p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>-->
+            <!--</div>-->
+        </div>
+        <div class="row">
+<!--            <div class="col-md-4">
+                <h2>About</h2>
+                <p>{{about_text}}</p>
+            </div>-->
+            <div class="col-md-12">
+                <h2>Description</h2>
+                <p>{{description}}</p>
+            </div>
+            <!--<div class="col-md-4">-->
+            <!--<h2>Heading</h2>-->
+            <!--<p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>-->
+            <!--</div>-->
+        </div>
+
+    </div>
 <!--	{{#each photos}}
 		{{> photo}}
 	{{else}}
@@ -7,71 +39,47 @@
 	{{> page_footer}}-->
 </template>
 
-<!--<template name = "page_home">
-    <div class="container marketing" >
-        <div class="row" >
-            <div class="col-lg-4" >
-                <img class="img-circle" data-src="holder.js/250x250" style="width: 250px; height: 250px;" src='{{firstphoto.images.0.source}}'/>
-                <h2>Vad är {{fbname}}?</h2>
-                <p>{{about}}</p>
+<template name="about_cover">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <!--<ol class="carousel-indicators">-->
+            <!--<li data-target="#myCarousel" data-slide-to="0" class="active"></li>-->
+            <!--<li data-target="#myCarousel" data-slide-to="1" class=""></li>-->
+            <!--<li data-target="#myCarousel" data-slide-to="2" class=""></li>-->
+        <!--</ol>-->
+        <div class="carousel-inner">
+            <div class="item active">
+                <img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:First slide" alt="First slide" src="{{about_cover}}">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>{{fbname}}</h1>
+                        <!--<p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>-->
+                        <!--<p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>-->
+                    </div>
+                </div>
             </div>
-            <div class="col-lg-4" >
-                <img class="img-circle" data-src="holder.js/280x280" style="width: 250px; height: 250px;" src='{{secondphoto.images.0.source}}'/>
-                <h2>Välkommen till {{fbname}}!</h2>
-                <img class="img" data-src="holder.js/140x140/auto" alt="140x140" src='{{owner_pic}}' />
-                <p><span class="text-muted"></span>{{owner_name}}</p>
-            </div>
-            <div class="col-lg-4" >
-                <img class="img-circle" data-src="holder.js/280x280" style="width: 250px; height: 250px;" src='{{thirdphoto.images.0.source}}'/>
-                <h2>Kontakta oss gärna på:</h2>
-                <p>Tel: {{phone}}</p>
-                &lt;!&ndash; E-post: patric@bügg.se<br><br>&ndash;&gt;
-                <img class="img" data-src="holder.js/140x140/auto" src='{{logo}}' />
-            </div>
+            <!--<div class="item">-->
+                <!--<img data-src="holder.js/900x500/auto/#666:#6a6a6a/text:Second slide" alt="Second slide" src="{{secondcart.images.[2].source}}">-->
+                <!--<div class="container">-->
+                    <!--<div class="carousel-caption">-->
+                        <!--<h1>{{secondcart.name}}</h1>-->
+                        <!--&lt;!&ndash;<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>&ndash;&gt;-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="item">-->
+                <!--<img data-src="holder.js/900x500/auto/#555:#5a5a5a/text:Third slide" alt="Third slide" src="{{thirdcart.images.[2].source}}">-->
+                <!--<div class="container">-->
+                    <!--<div class="carousel-caption">-->
+                        <!--<h1>{{thirdcart.name}}</h1>-->
+                        <!--&lt;!&ndash;<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>&ndash;&gt;-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
         </div>
-    </div>
-    <div class="container marketing" >
-        <div class="row" >
-            {{#each secondthreephotos}}
-            {{> photo}}
-            {{/each}}
-        </div>
-    </div>
-    <div class="container marketing" >
-        <div class="row" >
-            {{#each thirdthreephotos}}
-            {{> photo}}
-            {{/each}}
-        </div>
+        <!--<a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>-->
+        <!--<a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>-->
     </div>
 </template>
-
-<template name= "photo">
-    <div class="col-lg-4" >
-        <img class="img-circle" data-src="holder.js/280x280" style="width: 250px; height: 250px;" src='{{images.0.source}}'>
-    </div>
-</template>-->
-
-<!-- <template name= "photo">
-	<div class="col-md-4" >
-		<img class="ad_info_thumbimg" src='{{images.0.source}}' alt ="thumb"></img>
-	</div>
-</template> -->
-
-<!--
-<template name = "photo_spinner">
-    <div id="spinner">
-        <center>
-            <img src="/images/loader2.gif" /><br>
-        </center>
-    </div>
-</template>
-
-<template name="metrobox">
-    <div class="metrobox" id="metrobox_{{id}}" style="display:none;">
-        {{#if images.0.source}}
-        <div class="front" style="background-image:url({{images.0.source}});" onclick="window.location='{{link}}';">
-        </div>
-        {{/if}}
-    </div>
-</template>-->

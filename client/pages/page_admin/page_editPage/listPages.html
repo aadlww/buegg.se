@@ -4,23 +4,22 @@
             <fieldset>
                 <legend>Add new page</legend>
                 <div>
-                    <label for="newPageName">Route name</label>
-                    <input id="newPageName" type="text" maxlength="30">
+                    <label for="newPageName">{{i18n "edit.route"}}</label><br>
+                    <input id="newPageName" type="text" maxlength="30"><br>
+                    <i>({{i18n "edit.route_descr"}}: {{urlText}})</i><br>
                     <br>
-                    <br>
-                    <i>{{urlText}}</i>
                 </div>
                 <div>
-                    <input type="button" class="btn btn-default" id='newPageBtn' value="Lägg till"/>
+                    <input type="button" class="btn btn-default" id='newPageBtn' value="{{i18n "edit.add"}}"/>
                 </div>
             </fieldset>
         </form>
 
-        <h3>Sidor</h3>
+        <h3>Pages</h3>
         <table id="pagesTable">
             <tr>
-                <th>Namn</th>
-                <th>Titel</th>
+                <th>{{i18n "edit.route"}}</th>
+                <th>{{i18n "edit.title"}}</th>
                 <th></th>
                 <th></th>
             </tr>
@@ -29,17 +28,13 @@
                 <td>{{name}}</td>
                 <td>{{title}}</td>
                 <td style="width:30px;">
-                    <button value="{{name}}" class="btn-yellow"> Ändra</button>
+                    <button value="{{name}}" class="btn-yellow">{{i18n "edit.edit"}}</button>
                 </td>
                 <td style="width:30px;">
-                    {{#if required}}
-                    {{else}}
-
-                    <button value="{{name}}" class="btn-red">
-                        x
-                    </button>
-
-                    {{/if}}
+                    <!--{{#if required}}-->
+                    <!--{{else}}-->
+                    <button value="{{name}}" class="btn-red">{{i18n "edit.remove"}}</button>
+                    <!--{{/if}}-->
                 </td>
             </tr>
             {{/each}}

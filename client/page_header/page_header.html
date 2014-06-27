@@ -30,6 +30,7 @@
                         <ul class="nav navbar-nav">
                             <li class="active"><a id="navBtnHome" class="navBtn" onclick="app.navigate('', {trigger: true});">{{i18n "links.home"}}</a></li>
                             <li><a class="navBtn" onclick="app.navigate('news', {trigger: true});">{{i18n "links.news"}}</a></li>
+                            <li><a class="navBtn" onclick="app.navigate('about', {trigger: true});">{{i18n "links.about"}}</a></li>
                             {{#each listPages}}
                                 <li><a class="navBtn" onclick="app.navigate('page/{{name}}', {trigger: true});">{{title}}</a></li>
                             {{/each}}

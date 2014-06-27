@@ -6,22 +6,21 @@
             <div class="page_content">
                 {{#if pageContent}}
                     <h2>{{pageName}}</h2>
-                    <label for="updateTitle">Titel:</label>
+                    <label for="updateTitle">{{i18n "edit.title"}}</label>
                     <input type="text" id="updateTitle" value="{{pageContent.title}}" style="
                         width:100%;
                         border-radius:4px;
                         border: 1px solid #d9d9d9;
                         height:30px;
                         font-size:20px;">
-                    <i>(Texten som visas i navigations-listen)</i>
-                    <p>Innehåll:</p>
-                    <textarea id="editor" style="width:100%; min-height:600px;">
-                    </textarea>
+                    <i>({{i18n "edit.title_descr"}})</i><br>
+                    <label for="editor">{{i18n "edit.content"}}</label>
+                    <textarea id="editor" style="width:100%; min-height:600px;"></textarea>
                     <br>
                     <div>
                         <center>
-                            <input type="button" id="updatePageBtn" class="btn btn-default" value="Spara" />
-                            <input type="button" id="abortPageBtn" class="btn" value="Avbryt" />
+                            <input type="button" id="updatePageBtn" class="btn btn-default" value="{{i18n "edit.save"}}" />
+                            <input type="button" id="abortPageBtn" class="btn" value="{{i18n "edit.abort"}}" />
                         </center>
                     </div>
                 {{else}}

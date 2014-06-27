@@ -49,8 +49,8 @@
 <template name= "post_right">
   <div class="row featurette">
     <div class="col-md-7">
-      <h2 class="featurette-heading"><span class="text-muted">{{photo.name}}</span></h2>
-      <p class="lead">{{photo.created_time}}</p>
+      <h2 class="featurette-heading">{{text}}<span class="text-muted">{{muted}}</span></h2>
+      <p class="lead">{{rest}} {{photo.created_time}}</p>
     </div>
     <div class="col-md-5">
       <img class="featurette-image img-responsive" data-src="holder.js/500x500" alt="500x500" src='{{photo.images.[0].source}}'>
@@ -65,8 +65,8 @@
       <img class="featurette-image img-responsive" data-src="holder.js/500x500" alt="500x500" src='{{photo.images.[0].source}}'>
     </div>
     <div class="col-md-7">
-      <h2 class="featurette-heading"><span class="text-muted">{{photo.name}}</span></h2>
-      <p class="lead">{{photo.created_time}}</p>
+      <h2 class="featurette-heading">{{text}}<span class="text-muted">{{muted}}</span></h2>
+      <p class="lead">{{rest}} {{photo.created_time}}</p>
     </div>
   </div>
   <hr class="featurette-divider">

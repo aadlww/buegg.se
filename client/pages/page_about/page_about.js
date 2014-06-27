@@ -1,42 +1,67 @@
+Template.about_cover.fbname = function(){
+    var site = FBSiteInfo.find({site: facebookURL}).fetch();
+    if (site.length > 0)
+        return site[0].name;
+};
+
+Template.page_about.about_text = function(){
+    var site = FBSiteInfo.find({site: facebookURL}).fetch();
+    if (site.length > 0)
+        return site[0].about;
+};
+
+Template.page_about.mission = function(){
+    var site = FBSiteInfo.find({site: facebookURL}).fetch();
+    if (site.length > 0)
+        return site[0].mission;
+};
+
+Template.page_about.description = function(){
+    var site = FBSiteInfo.find({site: facebookURL}).fetch();
+    if (site.length > 0)
+        return site[0].description;
+};
+
+Template.about_cover.about_cover = function (){
+    var site = FBSiteInfo.find({site: facebookURL}).fetch();
+    if (site.length > 0)
+       return site[0].cover;
+};
 
 // Template.page_about.rendered = function ( ) {
 // 	//console.log('ad_list rendered');
 // 	$('#home_content').fadeIn();
 // };
 
-Template.page_about.photos = function (){
-	photos = FBPhotos.find({},{sort: {created_time: -1}});
-	// console.log(photos);
-	return FBPhotos.find({},{sort: {created_time: -1}});
-};
-
-Template.page_about.firstphoto = function (){
-	photo = FBPhotos.find({},{sort: {created_time: -1}, limit: 1}).fetch();
-	// console.log(photo[0]);
-	return photo[0];
-};
-Template.page_about.secondphoto = function (){
-	photo = FBPhotos.find({},{sort: {created_time: -1}, skip: 1, limit: 1}).fetch();
-	// console.log(photo[0]);
-	return photo[0];
-};
-Template.page_about.thirdphoto = function (){
-	photo = FBPhotos.find({},{sort: {created_time: -1}, skip: 2, limit: 1}).fetch();
-	// console.log(photo[0]);
-	return photo[0];
-};
-
-Template.page_about.firstthreephotos = function (){
-	return FBPhotos.find({},{sort: {created_time: -1}, limit: 3});
-};
-
-Template.page_about.secondthreephotos = function (){
-	return FBPhotos.find({},{sort: {created_time: -1}, skip: 3, limit: 3});
-};
-
-Template.page_about.thirdthreephotos = function (){
-	return FBPhotos.find({},{sort: {created_time: -1}, skip: 6, limit: 3});
-};
+//Template.page_about.photos = function (){
+//	photos = FBPhotos.find({},{sort: {created_time: -1}});
+//	// console.log(photos);
+//	return FBPhotos.find({},{sort: {created_time: -1}});
+//};
+//
+//
+//Template.page_about.secondphoto = function (){
+//	photo = FBPhotos.find({},{sort: {created_time: -1}, skip: 1, limit: 1}).fetch();
+//	// console.log(photo[0]);
+//	return photo[0];
+//};
+//Template.page_about.thirdphoto = function (){
+//	photo = FBPhotos.find({},{sort: {created_time: -1}, skip: 2, limit: 1}).fetch();
+//	// console.log(photo[0]);
+//	return photo[0];
+//};
+//
+//Template.page_about.firstthreephotos = function (){
+//	return FBPhotos.find({},{sort: {created_time: -1}, limit: 3});
+//};
+//
+//Template.page_about.secondthreephotos = function (){
+//	return FBPhotos.find({},{sort: {created_time: -1}, skip: 3, limit: 3});
+//};
+//
+//Template.page_about.thirdthreephotos = function (){
+//	return FBPhotos.find({},{sort: {created_time: -1}, skip: 6, limit: 3});
+//};
 
 // Template.page_about.logo = function(){
 //   var site = FBSiteInfo.find({site: facebookURL}).fetch();
@@ -74,66 +99,48 @@ Template.page_about.thirdthreephotos = function (){
 //         return ((m % n) + n) % n;
 // };
 
-Template.page_about.about = function(){
-	var site = FBSiteInfo.find({site: facebookURL}).fetch();
-	if (site.length > 0)
-	{
-		// console.log(site[0].about);
-		return site[0].about;
-	}
-};
-
-Template.page_about.fbname = function(){
-	var site = FBSiteInfo.find({site: facebookURL}).fetch();
-	if (site.length > 0)
-	{
-		// console.log(site[0].name);
-		return site[0].name;
-	}
-};
-
-Template.page_about.phone = function(){
-	var site = FBSiteInfo.find({site: facebookURL}).fetch();
-	if (site.length > 0)
-	{
-		// console.log(site[0].phone);
-		return site[0].phone;
-	}
-};
-
-Template.page_about.posts = function(){
-	var site = FBSiteInfo.find({site: facebookURL}).fetch();
-	if (site.length > 0)
-	{
-		// console.log(site[0].posts);
-		return site[0].posts;
-	}
-};
-
-Template.page_about.owner_name = function(){
-	var site = FBSiteInfo.find({site: facebookURL}).fetch();
-	if (site.length > 0)
-	{
-		// console.log(site[0].owner_name);
-		return site[0].owner_name;
-	}
-};
-
-Template.page_about.owner_pic = function(){
-	var site = FBSiteInfo.find({site: facebookURL}).fetch();
-	if (site.length > 0)
-	{
-		// console.log(site[0].owner_pic);
-		return site[0].owner_pic;
-	}
-	return loadingIcon;
-};
-
-Template.page_about.logo = function(){
-  var site = FBSiteInfo.find({site: facebookURL}).fetch();
-  if (site.length > 0)
-  {
-    // console.log(site[0].logo);
-    return site[0].logo;
-  }
-};
+//Template.page_about.phone = function(){
+//	var site = FBSiteInfo.find({site: facebookURL}).fetch();
+//	if (site.length > 0)
+//	{
+//		// console.log(site[0].phone);
+//		return site[0].phone;
+//	}
+//};
+//
+//Template.page_about.posts = function(){
+//	var site = FBSiteInfo.find({site: facebookURL}).fetch();
+//	if (site.length > 0)
+//	{
+//		// console.log(site[0].posts);
+//		return site[0].posts;
+//	}
+//};
+//
+//Template.page_about.owner_name = function(){
+//	var site = FBSiteInfo.find({site: facebookURL}).fetch();
+//	if (site.length > 0)
+//	{
+//		// console.log(site[0].owner_name);
+//		return site[0].owner_name;
+//	}
+//};
+//
+//Template.page_about.owner_pic = function(){
+//	var site = FBSiteInfo.find({site: facebookURL}).fetch();
+//	if (site.length > 0)
+//	{
+//		// console.log(site[0].owner_pic);
+//		return site[0].owner_pic;
+//	}
+//	return loadingIcon;
+//};
+//
+//Template.page_about.logo = function(){
+//  var site = FBSiteInfo.find({site: facebookURL}).fetch();
+//  if (site.length > 0)
+//  {
+//    // console.log(site[0].logo);
+//    return site[0].logo;
+//  }
+//};
