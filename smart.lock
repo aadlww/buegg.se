@@ -11,7 +11,8 @@
       "accounts-ui-bootstrap-dropdown": {},
       "bootstrap-3": {},
       "jquery-ui-bootstrap": {},
-      "bootstrap3-wysihtml5": {}
+      "bootstrap3-wysihtml5": {},
+      "just-i18n": {}
     },
     "packages": {
       "collectionFS": {
@@ -63,6 +64,11 @@
         "git": "https://github.com/andreioprisan/meteor-bootstrap3-wysihtml5.git",
         "tag": "v0.3.3",
         "commit": "251d564c3eb5b5b7a89a3e3e63f58633e0816332"
+      },
+      "just-i18n": {
+        "git": "https://github.com/subhog/meteor-just-i18n.git",
+        "tag": "v0.3.0",
+        "commit": "a60e7f4350fb9648d6f6b4a01acbbc114c4f4343"
       },
       "cfs-base-package": {
         "git": "https://github.com/CollectionFS/Meteor-cfs-base-package.git",

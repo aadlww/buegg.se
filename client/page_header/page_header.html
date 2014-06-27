@@ -28,13 +28,13 @@
                     </div>
                     <div id="navbar-collapse" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
-                            <li class="active"><a id="navBtnHome" class="navBtn" onclick="app.navigate('', {trigger: true});">Home</a></li>
-                            <li><a class="navBtn" onclick="app.navigate('news', {trigger: true});">News</a></li>
+                            <li class="active"><a id="navBtnHome" class="navBtn" onclick="app.navigate('', {trigger: true});">{{i18n "links.home"}}</a></li>
+                            <li><a class="navBtn" onclick="app.navigate('news', {trigger: true});">{{i18n "links.news"}}</a></li>
                             {{#each listPages}}
                                 <li><a class="navBtn" onclick="app.navigate('page/{{name}}', {trigger: true});">{{title}}</a></li>
                             {{/each}}
                             {{#if isUserAdmin}}
-                                <li><a class="navBtn" onclick="app.navigate('admin', {trigger: true});">Admin</a></li>
+                                <li><a class="navBtn" onclick="app.navigate('admin', {trigger: true});">{{i18n "links.admin"}}</a></li>
                             {{/if}}
                         </ul>
                     </div>
