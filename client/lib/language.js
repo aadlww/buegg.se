@@ -28,6 +28,11 @@ i18n.map('en_US', {
         add: 'Add',
         edit: 'Edit',
         remove: 'X'
+    },
+    about: {
+        about: 'About',
+        mission: 'Mission',
+        description: 'Description'
     }
 });
 
@@ -40,7 +45,7 @@ i18n.map('sv_SE', {
     links: {
         home: 'Hem',
         news: 'Nyheter',
-        about: 'Om företaget',
+        about: 'Om',
         admin: 'Admin'
     },
     edit: {
@@ -54,6 +59,11 @@ i18n.map('sv_SE', {
         add: 'Skapa',
         edit: 'Ändra',
         remove: 'X'
+    },
+    about: {
+        about: 'Om',
+        mission: 'Aspiration',
+        description: 'Beskrivning'
     }
 });
 
