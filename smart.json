@@ -3,13 +3,13 @@
     "collectionFS": {},
     "canvas-image-manipulation": {},
     "roles": {},
-    "jquery-ui": {},
+    "mrt:jquery-ui": {},
     "toastjs": {},
     "cron": {},
     "accounts-ui-bootstrap-dropdown": {},
-    "bootstrap-3": {},
-    "jquery-ui-bootstrap": {},
-    "bootstrap3-wysihtml5": {},
-    "just-i18n": {}
+    "mrt:bootstrap-3": {},
+    "mrt:jquery-ui-bootstrap": {},
+    "mrt:bootstrap-wysihtml5": {},
+    "mrt:just-i18n": {}
   }
 }

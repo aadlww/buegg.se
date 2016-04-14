@@ -11,7 +11,7 @@ accounts-facebook
 backbone
 fbgraph
 cron
-bootstrap-3
-jquery-ui
-bootstrap3-wysihtml5
-just-i18n
+mrt:bootstrap-3
+mrt:jquery-ui-bootstrap
+mrt:bootstrap-wysihtml5
+mrt:just-i18n
