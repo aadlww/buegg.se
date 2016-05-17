@@ -163,10 +163,17 @@ Meteor.startup(() => {
 
     fbUpdate();
 
-    every_midnight = new Meteor.Cron({
-        events:{
-            "*/15 * * * *" : fbUpdate
+    SyncedCron.add({
+        name: 'Download facebook data',
+        schedule: function(parser) {
+            return parser.text('every 15 minutes');
+        },
+        job: function() {
+            var numbersCrunched = fbUpdate();
+            return numbersCrunched;
         }
     });
+
+    SyncedCron.start();
 });
 
