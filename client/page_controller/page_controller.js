@@ -1,7 +1,15 @@
-Template.page_controller.display_page = function (){
-    var page = Session.get('currentPage');
-    return Template[page];
-};
+Template.page_controller.helpers({
+    display_page: function () {
+        var page = Session.get('currentPage');
+        return Template[page];
+    }
+});
+
+// Template.page_controller.display_page = function (){
+//     var page = Session.get('currentPage');
+//     return Template[page];
+// };
+
 //
 //Template.dynamicTemplate.chooseTemplate = function (name) {
 //    name = Session.get('currentPage');

@@ -9,9 +9,10 @@ accounts-password
 accounts-ui
 accounts-facebook
 backbone
-fbgraph
 cron
 mrt:bootstrap-3
 mrt:jquery-ui-bootstrap
 mrt:bootstrap-wysihtml5
 mrt:just-i18n
+stevezhu:fbgraph
+service-configuration

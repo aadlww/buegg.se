@@ -20,6 +20,8 @@ Template.page_disclaimer.rendered = function(){
 
 };
 
-Template.page_disclaimer.facebookURL = function(){
-    return facebookURL
-};
+Template.page_disclaimer.helpers({
+	'facebookURL': function() {
+		return facebookURL;
+	}
+});

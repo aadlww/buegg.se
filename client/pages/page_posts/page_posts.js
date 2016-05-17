@@ -5,26 +5,44 @@
 // }
 
 
-Template.page_posts.posts = function (){
-	var _photos = FBPhotos.find({},{sort: {created_time: -1}}).fetch();
-	result = [];
-    n = 1;
-    if(_photos.length > 0) {
-        _photos.forEach(function (_photo) {
-            var res = ['Hammarö','Bygg','Kakel'];
-            res.sort(function() {
-                return Math.random() - 0.5;
-            });
-            if (_photo.name)
-                res = _photo.name.split(/(!|,)/,3);
-            result.push({index:n, photo:_photo, text:res[0], muted:res[1], rest:res[2]});
-            n++;
-        });
-    }
-	return result;//FBPhotos.find({},{sort: {created_time: -1}});
-};
+// Template.page_posts.posts = function (){
+// 	var _photos = FBPhotos.find({},{sort: {created_time: -1}}).fetch();
+// 	result = [];
+//     n = 1;
+//     if(_photos.length > 0) {
+//         _photos.forEach(function (_photo) {
+//             var res = ['Hammarö','Bygg','Kakel'];
+//             res.sort(function() {
+//                 return Math.random() - 0.5;
+//             });
+//             if (_photo.name)
+//                 res = _photo.name.split(/(!|,)/,3);
+//             result.push({index:n, photo:_photo, text:res[0], muted:res[1], rest:res[2]});
+//             n++;
+//         });
+//     }
+// 	return result;//FBPhotos.find({},{sort: {created_time: -1}});
+// };
 
 Template.page_posts.helpers({
+    posts: function () {
+        var _photos = FBPhotos.find({}, {sort: {created_time: -1}}).fetch();
+        result = [];
+        n = 1;
+        if (_photos.length > 0) {
+            _photos.forEach(function (_photo) {
+                var res = ['Hammarö', 'Bygg', 'Kakel'];
+                res.sort(function () {
+                    return Math.random() - 0.5;
+                });
+                if (_photo.name)
+                    res = _photo.name.split(/(!|,)/, 3);
+                result.push({index: n, photo: _photo, text: res[0], muted: res[1], rest: res[2]});
+                n++;
+            });
+        }
+        return result;//FBPhotos.find({},{sort: {created_time: -1}});
+    },
     left: function() {
         return (this.index % 2) === 0;
     },
