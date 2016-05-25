@@ -5,14 +5,14 @@ function fbUpdate()
     console.log('Set access token!');
     FBGraph.setAccessToken(facebookAccessToken);
 
-    console.log('Extend access token!');
-    FBGraph.extendAccessToken({
-        "client_id":      app.appId
-        , "client_secret":  app.secret
-    }, function (err, facebookRes) {
-        facebookAccessToken = facebookRes;
-        // console.log('AccessToken:' + facebookRes);
-    });
+    // console.log('Extend access token!');
+    // FBGraph.extendAccessToken({
+    //     "client_id":      app.appId
+    //     , "client_secret":  app.secret
+    // }, function (err, facebookRes) {
+    //     facebookAccessToken = facebookRes;
+    //     // console.log('AccessToken:' + facebookRes);
+    // });
 
     console.log('Updating from facebook...');
     FBPhotos.remove({});
